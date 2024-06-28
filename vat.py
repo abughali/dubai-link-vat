@@ -974,7 +974,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
     # Data payload
     data = {
         "user": st.secrets["gte_user"],
-        "password": st.secrets["gte_password"],
+        "password": st.secrets["gte_password"],      
         "InvoiceSeries": "",
         "InvoiceNumberFrom": "",
         "InvoiceNumberTo": "",
@@ -1008,6 +1008,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
             due_date = format_date(invoice.get("DueDate"))
             currency = invoice.get("Currency")
             customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
+            exchange_rate = float(invoice.get("InvoiceCurrencyFactor", 1))
             
             for line in invoice.findall(".//Line"):
                 invoice_item_count += 1
@@ -1023,20 +1024,30 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     item_description = f"Name :- {pax_name} {pax_surname}\n {service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 else:
                     item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
-                
+
+                # Convert amounts to AED if not already in AED
+                if currency != "AED":
+                    item_amount = float(line.get("NetLineAmount")) * exchange_rate
+                    taxes = float(line.get("Taxes")) * exchange_rate
+                else:
+                    item_amount = float(line.get("NetLineAmount"))
+                    taxes = float(line.get("Taxes"))
+
                 line_data = {
                     "Invoice No": invoice_number,
                     "InvoiceDate": invoice_date,
                     "DueDate": due_date,
                     "Service Date": service_date,
-                    "Currency": currency,
+                    "Currency": "AED",
                     "CustomerName": customer_name,
                     "Memo": line.get("BookingCode"),
-                    "Item Amount": line.get("NetLineAmount"),
-                    "Taxes": line.get("Taxes"),
+                    "Item Amount": item_amount,
+                    "Taxes": taxes,
                     "Item Description": item_description,
-                    "Tax Code": "5% VAT" if float(line.get("Taxes")) > 0 else "EX Exempt"
+                    "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt"
                 }
+
+
                 invoices.append(line_data)
         
         # Create a DataFrame
@@ -1048,16 +1059,46 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
         return 0, 0, pd.DataFrame()
 
 def save_csv_files(df, start_date_str, end_date_str):
-    chunks = [df[i:i + 1000] for i in range(0, df.shape[0], 1000)]
-    csv_files = []
+    # Exclude rows with negative amounts
+    df_positive = df[df["Item Amount"] >= 0]
     
+    # Group by invoice number
+    grouped = df_positive.groupby("Invoice No")
+    
+    # Create chunks
+    chunk_size = 1000
+    current_chunk = []
+    chunks = []
+    current_size = 0
+    
+    for name, group in grouped:
+        group_size = len(group)
+        if current_size + group_size > chunk_size:
+            chunks.append(pd.concat(current_chunk))
+            current_chunk = []
+            current_size = 0
+        current_chunk.append(group)
+        current_size += group_size
+    
+    if current_chunk:
+        chunks.append(pd.concat(current_chunk))
+    
+    csv_files = []
     for idx, chunk in enumerate(chunks):
         file_name = f'invoices_{start_date_str}_{end_date_str}_part{idx+1}.csv'
         chunk_csv = chunk.to_csv(index=False)
         csv_files.append((file_name, chunk_csv))
     
     return csv_files
-    
+
+def save_credit_memo_files(df, start_date_str, end_date_str):
+    credit_memo_df = df[df["Item Amount"] < 0]
+    if not credit_memo_df.empty:
+        credit_memo_file_name = f'credit_memo_{start_date_str}_{end_date_str}.csv'
+        credit_memo_csv = credit_memo_df.to_csv(index=False)
+        return credit_memo_file_name, credit_memo_csv
+    return None, None
+
 def qb():
     pd.options.mode.copy_on_write = True
     title = 'QBO Report Generator'
@@ -1068,6 +1109,8 @@ def qb():
 
     if "csv_files" not in st.session_state:
         st.session_state.csv_files = []
+    if "credit_memo_file" not in st.session_state:
+        st.session_state.credit_memo_file = None
     if "invoice_count" not in st.session_state:
         st.session_state.invoice_count = 0
     if "invoice_item_count" not in st.session_state:
@@ -1089,11 +1132,16 @@ def qb():
                     invoice_count, invoice_item_count, df = fetch_invoices(invoice_date_from_str, invoice_date_to_str)
 
                     if not df.empty:
-                        df.index = range(1, len(df) + 1)
+                        df.reset_index(drop=True, inplace=True)  # Reset index and drop the old index
                         st.session_state.csv_files = save_csv_files(df, invoice_date_from_str, invoice_date_to_str)
                         st.session_state.invoice_count = invoice_count
                         st.session_state.invoice_item_count = invoice_item_count
                         st.session_state.df = df
+
+                        # Save credit memo files
+                        credit_memo_file_name, credit_memo_csv = save_credit_memo_files(df, invoice_date_from_str, invoice_date_to_str)
+                        if credit_memo_csv:
+                            st.session_state.credit_memo_file = (credit_memo_file_name, credit_memo_csv)
 
     if st.session_state.invoice_count:
         st.write(f"Number of invoices: {st.session_state.invoice_count}")
@@ -1110,6 +1158,17 @@ def qb():
                 file_name=file_name,
                 mime='text/csv',
             )
+    
+    if st.session_state.credit_memo_file:
+        file_name, csv = st.session_state.credit_memo_file
+        st.download_button(
+            label=f"📥 Download {file_name}",
+            data=csv,
+            file_name=file_name,
+            mime='text/csv',
+        )
+
+
 
 
 
