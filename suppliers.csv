@@ -1,0 +1,49 @@
+Supplier Name,Service Type,Taxes Included
+Fly Dubai,Air Ticket,False
+Air Arabia,Air Ticket,False
+Emirates Airlines,Air Ticket,False
+Syria Link Travel & Tours,Air Ticket,False
+BSP IATA,Air Ticket,False
+HotelBeds Services,Excursion,False
+Avis Car,Excursion,False
+Transferz,Excursion,False
+Optimum Car Rental,Excursion,False
+Al Majlis Reservation Services,Excursion,False
+Tune Protect,Excursion,False
+Khalidiya Palace Rayhaan by Rotana,Excursion,True
+AAT Limousine L.L.C,Excursion,False
+Unique Masters,Excursion,True
+Peace Land Travel & Tourism L.L.C,Excursion,True
+AIRPORT PASSES MEET & ASSIST SERVICE,Excursion,False
+KOI Technologies FZCO,Excursion,False
+Rutwa Tourism LLC,Excursion,False
+Al Bahar Hotel & Resort,Hotel Reservation,False
+H2H - ExpediaRapid,Hotel Reservation,True
+25hours Hotel One Central,Hotel Reservation,False
+HCD-Derbysoft Hilton,Hotel Reservation,False
+Al Hamra Residence,Hotel Reservation,False
+DL - Payment Service Charge,Hotel Reservation,False
+H2H - HotelDoMexico,Hotel Reservation,False
+HotelBeds XML,Hotel Reservation,False
+H2H - DidaTravel,Hotel Reservation,True
+H2H - LCI (JWS),Hotel Reservation,True
+HotelBeds Services,Hotel Reservation,False
+H2H - Agoda,Hotel Reservation,True
+Bookohotel - XML,Hotel Reservation,True
+Al Majaz Premiere Hotel Apartments,Hotel Reservation,False
+H2H - Egypt Express Travel(JWS),Hotel Reservation,False
+HPRO travel,Hotel Reservation,True
+H2H - Travco v7,Hotel Reservation,True
+H2H - Youtravel,Hotel Reservation,False
+Address Beach Resort DY,Hotel Reservation,False
+Bulgari Resort & Residences Dubai,Hotel Reservation,False
+Four Points by Sheraton Sharjah,Hotel Reservation,False
+Khalidiya Palace Rayhaan by Rotana,Hotel Reservation,False
+Radisson Blu Resort Fujairah,Hotel Reservation,False
+Within Earth,Hotel Reservation,True
+Hilton Garden Inn Ras Al Khaimah,Hotel Reservation,False
+H2H - DhiscoSabre,Hotel Reservation,False
+Fairmont Ajman,Hotel Reservation,False
+Out Bound Supplier,Other,False
+Visa Account,Visa,False
+Aspin Holding,Visa,False
