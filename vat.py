@@ -958,6 +958,69 @@ def main_app():
             excel_path = generate_report(df)
             with open(excel_path, "rb") as file:
                 st.download_button(label=f'📥 Download {report_name} Report', data=file, file_name=report_name, mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+#########################################################################################################
+supplierList = []
+
+def fetch_and_populate_suppliers():
+    """Fetch suppliers from the API and populate the supplier list."""
+    global supplierList
+    
+    # URL and headers
+    url = "https://www.gte.travel/wsExportacion/wssuppliers.asmx/getSupplierList"
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    
+    # Data payload
+    data = {
+        "user": st.secrets["gte_user"],
+        "password": st.secrets["gte_password"],   
+        "SupplierId": "",
+        "ExportMode": "",
+        "creationDateFrom": "",
+        "creationDateTo": ""
+    }
+    
+    # Category mapping
+    category_mapping = {
+        "1": "Cross Sell Hotel",
+        "2": "Dynamic Hotel",
+        "3": "Excursions",
+        "4": "Extranet Hotel",
+        "5": "Static Hotel",
+        "6": "Tickets",
+        "7": "Visa",
+        "8": "XML Hotel"
+    }
+    
+    response = requests.post(url, headers=headers, data=data)
+
+    if response.status_code == 200:        
+        # Parse the XML response
+        root = ET.fromstring(response.text)
+        
+        # Extract supplier information
+        for supplier in root.findall(".//Supplier"):
+            category_element = supplier.find(".//Category")
+            category_id = category_element.get('Id') if category_element is not None else None
+            category_name = category_mapping.get(category_id, "Others")
+            
+            supplier_data = {
+                "Supplier Id": supplier.get("Id"),
+                "Category Id": category_id,
+                "Category Name": category_name
+            }
+            supplierList.append(supplier_data)
+        
+    else:
+        st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
+
+def get_category_name(supplier_id):
+    for supplier in supplierList:
+        if supplier["Supplier Id"] == supplier_id:
+            return supplier["Category Name"]
+    return "Supplier ID not found"
+
 # Function to remove time from datetime string
 def format_date(date_str):
     if date_str:
@@ -1018,6 +1081,9 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                 begin_travel_date = format_date(line.get("BeginTravelDate"))
                 end_travel_date = format_date(line.get("EndTravelDate"))
                 service_date = format_date(line.get("LineDate"))
+                # Extract SupplierId from Cost element
+                cost_elem = line.find(".//Cost")
+                supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
                 
                 # Conditionally include passenger name if available
                 if pax_name and pax_surname:
@@ -1044,7 +1110,8 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     "Item Amount": item_amount,
                     "Taxes": taxes,
                     "Item Description": item_description,
-                    "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt"
+                    "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
+                    "Service": get_category_name(supplier_id)
                 }
 
 
@@ -1101,7 +1168,7 @@ def save_credit_memo_files(df, start_date_str, end_date_str):
 
 def qb():
     pd.options.mode.copy_on_write = True
-    title = 'QBO Report Generator'
+    title = 'Juniper Report Generator'
     st.markdown(f"<h1 style='font-size:24px;'>{title}</h1>", unsafe_allow_html=True)
 
     invoice_date_from = st.date_input("Invoice Date From")
@@ -1128,7 +1195,7 @@ def qb():
                 with st.spinner('Fetching invoices...'):
                     invoice_date_from_str = invoice_date_from.strftime("%Y%m%d")
                     invoice_date_to_str = invoice_date_to.strftime("%Y%m%d")
-
+                    fetch_and_populate_suppliers()
                     invoice_count, invoice_item_count, df = fetch_invoices(invoice_date_from_str, invoice_date_to_str)
 
                     if not df.empty:
@@ -1142,13 +1209,15 @@ def qb():
                         credit_memo_file_name, credit_memo_csv = save_credit_memo_files(df, invoice_date_from_str, invoice_date_to_str)
                         if credit_memo_csv:
                             st.session_state.credit_memo_file = (credit_memo_file_name, credit_memo_csv)
+                        else:
+                            st.session_state.credit_memo_file = None
 
     if st.session_state.invoice_count:
         st.write(f"Number of invoices: {st.session_state.invoice_count}")
     if st.session_state.invoice_item_count:
         st.write(f"Number of invoice items: {st.session_state.invoice_item_count}")
     if not st.session_state.df.empty:
-        st.write(st.session_state.df)  # Display the DataFrame without the index
+        st.write(st.session_state.df)
     
     if st.session_state.csv_files:
         for file_name, csv in st.session_state.csv_files:
@@ -1169,14 +1238,11 @@ def qb():
         )
 
 
-
-
-
 def streamlit_menu():
         with st.sidebar:
             selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["QuickBooks Invoices", "Cities","Services", "Suppliers", "Fees Setup", "VAT Report Generator"],  # required
+                options=["Juniper Invoices", "Cities","Services", "Suppliers", "Fees Setup", "VAT Report Generator"],  # required
                 icons=["house",  "pin-map", "buildings", "gear", "calculator", "receipt"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
@@ -1205,7 +1271,7 @@ def main():
         service_type_editor('services.csv')   
     elif app_mode == "Fees Setup":
         vat_setup_editor('vat_setup.csv')
-    elif app_mode == "QuickBooks Invoices":
+    elif app_mode == "Juniper Invoices":
         qb()   
 
 if __name__ == "__main__":
