@@ -1071,8 +1071,9 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
             due_date = format_date(invoice.get("DueDate"))
             currency = invoice.get("Currency")
             customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
-            exchange_rate = float(invoice.get("InvoiceCurrencyFactor", 1))
-            
+            operation_rate_elem = invoice.find(".//OperationRate")
+            exchange_rate = float(operation_rate_elem.text) if operation_rate_elem is not None and operation_rate_elem.text else 1.0
+
             for line in invoice.findall(".//Line"):
                 invoice_item_count += 1
                 service = line.find(".//Service").text if line.find(".//Service") is not None else ""
@@ -1080,21 +1081,21 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                 pax_surname = invoice.find(".//Passenger/surname").text if invoice.find(".//Passenger/surname") is not None else ""
                 begin_travel_date = format_date(line.get("BeginTravelDate"))
                 end_travel_date = format_date(line.get("EndTravelDate"))
-                service_date = format_date(line.get("LineDate"))
+                service_date = begin_travel_date
                 # Extract SupplierId from Cost element
                 cost_elem = line.find(".//Cost")
                 supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
                 
                 # Conditionally include passenger name if available
                 if pax_name and pax_surname:
-                    item_description = f"Name :- {pax_name} {pax_surname}\n {service}\nTravel Date {begin_travel_date} - {end_travel_date}"
+                    item_description = f"Name :- {pax_name} {pax_surname}\n{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 else:
                     item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
 
                 # Convert amounts to AED if not already in AED
                 if currency != "AED":
-                    item_amount = float(line.get("NetLineAmount")) * exchange_rate
-                    taxes = float(line.get("Taxes")) * exchange_rate
+                    item_amount = round(float(line.get("NetLineAmount")) * exchange_rate, 2)
+                    taxes = round(float(line.get("Taxes")) * exchange_rate, 2)
                 else:
                     item_amount = float(line.get("NetLineAmount"))
                     taxes = float(line.get("Taxes"))
