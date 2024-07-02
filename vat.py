@@ -990,7 +990,8 @@ def fetch_and_populate_suppliers():
         "5": "Static Hotel",
         "6": "Tickets",
         "7": "Visa",
-        "8": "XML Hotel"
+        "8": "XML Hotel",
+        "9": "Offline Hotel"
     }
     
     response = requests.post(url, headers=headers, data=data)
@@ -1167,9 +1168,9 @@ def save_credit_memo_files(df, start_date_str, end_date_str):
         return credit_memo_file_name, credit_memo_csv
     return None, None
 
-def qb():
+def qb_invoices():
     pd.options.mode.copy_on_write = True
-    title = 'Juniper Report Generator'
+    title = 'Juniper Invoices Generator'
     st.markdown(f"<h1 style='font-size:24px;'>{title}</h1>", unsafe_allow_html=True)
 
     invoice_date_from = st.date_input("Invoice Date From")
@@ -1200,7 +1201,7 @@ def qb():
                     invoice_count, invoice_item_count, df = fetch_invoices(invoice_date_from_str, invoice_date_to_str)
 
                     if not df.empty:
-                        df.reset_index(drop=True, inplace=True)  # Reset index and drop the old index
+                        df.index = range(1, len(df) + 1)
                         st.session_state.csv_files = save_csv_files(df, invoice_date_from_str, invoice_date_to_str)
                         st.session_state.invoice_count = invoice_count
                         st.session_state.invoice_item_count = invoice_item_count
@@ -1237,18 +1238,228 @@ def qb():
             file_name=file_name,
             mime='text/csv',
         )
+##################################################################################################################################
 
+def fetch_bills(invoice_date_from, invoice_date_to):
+    # URL and headers
+    url = "https://www.gte.travel/wsExportacion/wsinvoices.asmx/GetInvoices"
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    # Data payload
+    data = {
+        "user": st.secrets["gte_user"],
+        "password": st.secrets["gte_password"],      
+        "InvoiceSeries": "",
+        "InvoiceNumberFrom": "",
+        "InvoiceNumberTo": "",
+        "InvoiceDateFrom": invoice_date_from,
+        "InvoiceDateTo": invoice_date_to,
+        "InvoiceIdNumberFrom": "",
+        "InvoiceIdNumberTo": "",
+        "BeginTravelDate": "",
+        "EndTravelDate": "",
+        "customerId": "",
+        "ExportMode": "",
+        "channel": "",
+        "IncludeRelatedInvoice": "",
+        "locator": ""
+    }
+
+    # Make the POST request
+    response = requests.post(url, headers=headers, data=data)
+
+    if response.status_code == 200:
+        root = ET.fromstring(response.text)
+
+        invoice_count = 0
+        invoice_item_count = 0
+        invoices = []
+
+        for invoice in root.findall(".//Invoice"):
+            invoice_count += 1
+            invoice_number = invoice.get("InvoiceNumber")
+            invoice_date = format_date(invoice.get("InvoiceDate"))
+            due_date = format_date(invoice.get("DueDate"))
+            #customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
+            tax_elem = invoice.find(".//tax")
+            tax_value = float(tax_elem.get("value")) if tax_elem is not None and tax_elem.get("value") else 0.0
+
+            for line in invoice.findall(".//Line"):
+                invoice_item_count += 1
+                # Extract SupplierId from Cost element
+                cost_elem = line.find(".//Cost")
+                supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
+                supplier_name = line.find(".//SupplierName").text
+                service = line.find(".//ArticleOfCost").text
+                begin_travel_date = format_date(line.get("BeginTravelDate"))
+                end_travel_date = format_date(line.get("EndTravelDate"))
+                # Extract SupplierId from Cost element
+                cost_elem = line.find(".//Cost")
+                supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
+                
+                item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
+                exchange_rate = float(cost_elem.get("ExchangeRate"))
+                currency = cost_elem.get("Currency")
+
+
+                # Convert amounts to AED if not already in AED
+                if currency != "AED":
+                    item_amount = round(float(cost_elem.get("TotalAmount")) / exchange_rate, 2)
+                else:
+                    item_amount = float(cost_elem.get("TotalAmount"))
+
+                taxes = round((tax_value / 100) * item_amount,2)
+
+                line_data = {
+                    "Bill No": invoice_number,
+                    "Bill Date": invoice_date,
+                    "DueDate": due_date,
+                    "Currency": "AED",
+                    "Supplier": supplier_name,
+                    "Memo": line.get("BookingCode"),
+                    "Expense Amount": item_amount,
+                    "Expense Tax Amount": taxes,
+                    "Expense Description": item_description,
+                    "Expense Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
+                    "Expense Account": get_category_name(supplier_id)
+                }
+
+
+                invoices.append(line_data)
+        
+        # Create a DataFrame
+        df = pd.DataFrame(invoices)
+        
+        return invoice_count, invoice_item_count, df
+    else:
+        st.error(f"Failed to fetch invoices. Status code: {response.status_code}")
+        return 0, 0, pd.DataFrame()
+
+def bill_save_csv_files(df, start_date_str, end_date_str):
+    # Exclude rows with negative amounts
+    df_positive = df[df["Expense Amount"] >= 0]
+    
+    # Group by invoice number
+    grouped = df_positive.groupby("Bill No")
+    
+    # Create chunks
+    chunk_size = 1000
+    current_chunk = []
+    chunks = []
+    current_size = 0
+    
+    for name, group in grouped:
+        group_size = len(group)
+        if current_size + group_size > chunk_size:
+            chunks.append(pd.concat(current_chunk))
+            current_chunk = []
+            current_size = 0
+        current_chunk.append(group)
+        current_size += group_size
+    
+    if current_chunk:
+        chunks.append(pd.concat(current_chunk))
+    
+    csv_files = []
+    for idx, chunk in enumerate(chunks):
+        file_name = f'bills_{start_date_str}_{end_date_str}_part{idx+1}.csv'
+        chunk_csv = chunk.to_csv(index=False)
+        csv_files.append((file_name, chunk_csv))
+    
+    return csv_files
+
+def bill_save_credit_memo_files(df, start_date_str, end_date_str):
+    credit_memo_df = df[df["Expense Amount"] < 0]
+    if not credit_memo_df.empty:
+        credit_memo_file_name = f'supplier_credit_{start_date_str}_{end_date_str}.csv'
+        credit_memo_csv = credit_memo_df.to_csv(index=False)
+        return credit_memo_file_name, credit_memo_csv
+    return None, None
+
+def qb_bills():
+    pd.options.mode.copy_on_write = True
+    title = 'Juniper Bills Generator'
+    st.markdown(f"<h1 style='font-size:24px;'>{title}</h1>", unsafe_allow_html=True)
+
+    invoice_date_from = st.date_input("Bill Date From")
+    invoice_date_to = st.date_input("Bill Date To")
+
+    if "bill_csv_files" not in st.session_state:
+        st.session_state.bill_csv_files = []
+    if "bill_credit_memo_file" not in st.session_state:
+        st.session_state.bill_credit_memo_file = None
+    if "bill_invoice_count" not in st.session_state:
+        st.session_state.bill_invoice_count = 0
+    if "bill_invoice_item_count" not in st.session_state:
+        st.session_state.bill_invoice_item_count = 0
+    if "bill_df" not in st.session_state:
+        st.session_state.bill_df = pd.DataFrame()
+
+    # Validation checks
+    if invoice_date_from and invoice_date_to:
+        same_month = invoice_date_from.month == invoice_date_to.month
+        if not same_month:
+            st.error("The period must be within the same month.")
+        else:
+            if st.button('Fetch Bills'):
+                with st.spinner('Fetching bills...'):
+                    invoice_date_from_str = invoice_date_from.strftime("%Y%m%d")
+                    invoice_date_to_str = invoice_date_to.strftime("%Y%m%d")
+                    fetch_and_populate_suppliers()
+                    invoice_count, invoice_item_count, bill_df = fetch_bills(invoice_date_from_str, invoice_date_to_str)
+
+                    if not bill_df.empty:
+                        bill_df.index = range(1, len(bill_df) + 1)
+                        st.session_state.bill_csv_files = bill_save_csv_files(bill_df, invoice_date_from_str, invoice_date_to_str)
+                        st.session_state.bill_invoice_count = invoice_count
+                        st.session_state.bill_invoice_item_count = invoice_item_count
+                        st.session_state.bill_df = bill_df
+
+                        # Save credit memo files
+                        credit_memo_file_name, credit_memo_csv = bill_save_credit_memo_files(bill_df, invoice_date_from_str, invoice_date_to_str)
+                        if credit_memo_csv:
+                            st.session_state.bill_credit_memo_file = (credit_memo_file_name, credit_memo_csv)
+                        else:
+                            st.session_state.bill_credit_memo_file = None
+
+    if st.session_state.bill_invoice_count:
+        st.write(f"Number of bills: {st.session_state.bill_invoice_count}")
+    if st.session_state.bill_invoice_item_count:
+        st.write(f"Number of bill items: {st.session_state.bill_invoice_item_count}")
+    if not st.session_state.bill_df.empty:
+        st.write(st.session_state.bill_df)
+    
+    if st.session_state.bill_csv_files:
+        for file_name, csv in st.session_state.bill_csv_files:
+            st.download_button(
+                label=f"📥 Download {file_name}",
+                data=csv,
+                file_name=file_name,
+                mime='text/csv',
+            )
+    
+    if st.session_state.bill_credit_memo_file:
+        file_name, csv = st.session_state.bill_credit_memo_file
+        st.download_button(
+            label=f"📥 Download {file_name}",
+            data=csv,
+            file_name=file_name,
+            mime='text/csv',
+        )
 
 def streamlit_menu():
         with st.sidebar:
             selected = option_menu(
                 menu_title="Main Menu",  # required
-                options=["Juniper Invoices", "Cities","Services", "Suppliers", "Fees Setup", "VAT Report Generator"],  # required
-                icons=["house",  "pin-map", "buildings", "gear", "calculator", "receipt"],  # optional
+                options=["Juniper Invoices", "Juniper Bills", "Cities","Services", "Suppliers", "Fees Setup", "VAT Report Generator"],  # required
+                icons=["house", "receipt", "pin-map", "buildings", "gear", "calculator", "receipt"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
             )
         return selected
+
 
 def main():
     st.sidebar.markdown("""
@@ -1273,7 +1484,9 @@ def main():
     elif app_mode == "Fees Setup":
         vat_setup_editor('vat_setup.csv')
     elif app_mode == "Juniper Invoices":
-        qb()   
+        qb_invoices()   
+    elif app_mode == "Juniper Bills":
+        qb_bills()
 
 if __name__ == "__main__":
     main()
