@@ -1319,11 +1319,11 @@ def fetch_bills(invoice_date_from, invoice_date_to):
                     "Currency": "AED",
                     "Supplier": supplier_name,
                     "Memo": line.get("BookingCode"),
-                    "Expense Amount": item_amount,
-                    "Expense Tax Amount": taxes,
-                    "Expense Description": item_description,
-                    "Expense Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
-                    "Expense Account": get_category_name(supplier_id)
+                    "Line Amount": item_amount,
+                    "Line Tax Amount": taxes,
+                    "Line Description": item_description,
+                    "Line Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
+                    "Account": get_category_name(supplier_id)
                 }
 
 
@@ -1339,7 +1339,7 @@ def fetch_bills(invoice_date_from, invoice_date_to):
 
 def bill_save_csv_files(df, start_date_str, end_date_str):
     # Exclude rows with negative amounts
-    df_positive = df[df["Expense Amount"] >= 0]
+    df_positive = df[df["Line Amount"] >= 0]
     
     # Group by invoice number
     grouped = df_positive.groupby("Bill No")
@@ -1371,7 +1371,7 @@ def bill_save_csv_files(df, start_date_str, end_date_str):
     return csv_files
 
 def bill_save_credit_memo_files(df, start_date_str, end_date_str):
-    credit_memo_df = df[df["Expense Amount"] < 0]
+    credit_memo_df = df[df["Line Amount"] < 0]
     if not credit_memo_df.empty:
         credit_memo_file_name = f'supplier_credit_{start_date_str}_{end_date_str}.csv'
         credit_memo_csv = credit_memo_df.to_csv(index=False)
