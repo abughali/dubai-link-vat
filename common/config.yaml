@@ -1,0 +1,21 @@
+credentials:
+  usernames:
+    abughali:
+      email: m.abughali@gmail.com
+      failed_login_attempts: 0 # Will be managed automatically
+      logged_in: False # Will be managed automatically
+      name: Mahmoud
+      password: $2b$12$Mr.7G3mMcwYF8wM3KJ2m8eKkXz.kyLv6Kra4v6i3aChqOm695Q6dy
+    bilal:
+      email: m.abughali@gmail.com
+      failed_login_attempts: 0 # Will be managed automatically
+      logged_in: False # Will be managed automatically
+      name: Bilal
+      password: $2b$12$Mr.7G3mMcwYF8wM3KJ2m8eKkXz.kyLv6Kra4v6i3aChqOm695Q6dy      
+cookie:
+  expiry_days: 30
+  key: dubai_link_7LdX9Hk3Wn2Qp5Mf8RtV # Must be string
+  name: dubai_link_cookie_name
+pre-authorized:
+  emails:
+  - m.abughali@gmail.com
