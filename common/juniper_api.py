@@ -5,10 +5,11 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 
 
-if 'supplierList' not in st.session_state:
-    st.session_state['supplierList'] = []
 
 def fetch_and_populate_suppliers():
+
+    if 'supplierList' not in st.session_state:
+        st.session_state.supplierList = []    
 
     if st.session_state['supplierList']:
         return

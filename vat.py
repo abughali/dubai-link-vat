@@ -9,29 +9,10 @@ def main():
  
     utils.add_logo()
 
-    left_co, cent_co, last_co = st.columns(3)
+    _, cent_co, _ = st.columns(3)
     with cent_co:
         st.image("./images/dl.png", use_column_width=False)
     
-
- #   app_mode = streamlit_menu()
-
-#    if app_mode == "VAT Report Generator":
-#        main_app()
-#    elif app_mode == "Cities":
-#        area_state_country_editor('areas.csv')
-#    elif app_mode == "Suppliers":
-#        product_supplier_editor('suppliers.csv')
-#    elif app_mode == "Services":
-#        service_type_editor('services.csv')   
-#    elif app_mode == "Fees Setup":
-#        vat_setup_editor('vat_setup.csv')
-#    elif app_mode == "Juniper Invoices":
-#        qb_invoices()   
-#    elif app_mode == "Juniper Bills":
-#        qb_bills()
-
-
 main()
 utils.hide_home_page()
 
