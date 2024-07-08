@@ -151,7 +151,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                 else:
                     item_amount = float(line.get("NetLineAmount"))
                     taxes = float(line.get("Taxes"))
-
+             
                 line_data = {
                     "Invoice No": invoice_number,
                     "InvoiceDate": invoice_date,
@@ -164,8 +164,11 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     "Taxes": taxes,
                     "Item Description": item_description,
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
-                    "Service": get_category_name(supplier_id)
+                   # "Service": get_category_name(supplier_id)
                 }
+
+                print(f"{invoice_number:<8}{item_amount:<12.2f}{taxes:<10.2f}{currency:<6}")
+
 
                 invoices.append(line_data)
         
