@@ -111,6 +111,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
     st.write(f"Fetch invoices. Status code: {response.status_code}")
     if response.status_code == 200:
         root = ET.fromstring(response.text)
+        st.write(response.text)
 
         invoice_count = 0
         invoice_item_count = 0
@@ -166,9 +167,6 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
                    # "Service": get_category_name(supplier_id)
                 }
-
-                st.write(f"{invoice_number:<8}{item_amount:<12.2f}{taxes:<10.2f}{currency:<6}")
-
 
                 invoices.append(line_data)
         
