@@ -111,7 +111,6 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
     st.write(f"Fetch invoices. Status code: {response.status_code}")
     if response.status_code == 200:
         root = ET.fromstring(response.text)
-        st.write(response.text)
 
         invoice_count = 0
         invoice_item_count = 0
@@ -172,7 +171,9 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
         
         # Create a DataFrame
         df = pd.DataFrame(invoices)
-        
+        invoice_item_count = df['Invoice No'].count()
+        st.write(f'returned {invoice_item_count}')
+
         return invoice_count, invoice_item_count, df
     else:
         st.error(f"Failed to fetch invoices. Status code: {response.status_code}")
