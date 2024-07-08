@@ -5,14 +5,13 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 
 
+# Define the global supplier list
+supplierList = []
 
 def fetch_and_populate_suppliers():
 
-    if 'supplierList' not in st.session_state:
-        st.session_state.supplierList = []    
-
-    if st.session_state.supplierList:
-        return
+    global supplierList
+    supplierList.clear()  # Clear the list to fetch fresh data
 
     # URL and headers
     url = "https://www.gte.travel/wsExportacion/wssuppliers.asmx/getSupplierList"
@@ -60,13 +59,14 @@ def fetch_and_populate_suppliers():
                 "Category Id": category_id,
                 "Category Name": category_name
             }
-            st.session_state['supplierList'].append(supplier_data)
+            supplierList.append(supplier_data)
         
     else:
         st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
 
 def get_category_name(supplier_id):
-    for supplier in st.session_state['supplierList']:
+    global supplierList
+    for supplier in supplierList:
         if supplier["Supplier Id"] == supplier_id:
             return supplier["Category Name"]
     return "Supplier ID not found"

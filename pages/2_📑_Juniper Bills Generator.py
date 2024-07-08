@@ -56,8 +56,6 @@ def qb_bills():
     invoice_date_from = st.date_input("Bill Date From")
     invoice_date_to = st.date_input("Bill Date To", value=invoice_date_from)
 
-    if 'supplierList' not in st.session_state:
-        st.session_state.supplierList = []
     if "bill_csv_files" not in st.session_state:
         st.session_state.bill_csv_files = []
     if "bill_credit_memo_file" not in st.session_state:
