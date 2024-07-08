@@ -77,9 +77,7 @@ def qb_invoices():
                 with st.spinner('Fetching invoices...'):
                     invoice_date_from_str = invoice_date_from.strftime("%Y%m%d")
                     invoice_date_to_str = invoice_date_to.strftime("%Y%m%d")
-                    print("calling supp")
                     juniper_api.fetch_and_populate_suppliers()
-                    print("calling fetch_invoices")
 
                     invoice_count, invoice_item_count, df = juniper_api.fetch_invoices(invoice_date_from_str, invoice_date_to_str)
 

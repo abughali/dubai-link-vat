@@ -60,9 +60,7 @@ def fetch_and_populate_suppliers():
                 "Category Name": category_name
             }
             supplierList.append(supplier_data)
-        
-        print(f"supplierList refreshed {len(supplierList)}")
-        
+                
     else:
         st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
 
@@ -108,7 +106,6 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
 
     # Make the POST request
     response = requests.post(url, headers=headers, data=data)
-    st.write(f"Fetch invoices. Status code: {response.status_code}")
     if response.status_code == 200:
         root = ET.fromstring(response.text)
 
@@ -164,16 +161,13 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     "Taxes": taxes,
                     "Item Description": item_description,
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
-                   # "Service": get_category_name(supplier_id)
+                    "Service": get_category_name(supplier_id)
                 }
 
                 invoices.append(line_data)
         
         # Create a DataFrame
         df = pd.DataFrame(invoices)
-        invoice_item_count = df['Invoice No'].count()
-        st.write(f'returned {invoice_item_count}')
-
         return invoice_count, invoice_item_count, df
     else:
         st.error(f"Failed to fetch invoices. Status code: {response.status_code}")
