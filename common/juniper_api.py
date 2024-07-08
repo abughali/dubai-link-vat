@@ -108,7 +108,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
 
     # Make the POST request
     response = requests.post(url, headers=headers, data=data)
-
+    st.write(f"Fetch invoices. Status code: {response.status_code}")
     if response.status_code == 200:
         root = ET.fromstring(response.text)
 
