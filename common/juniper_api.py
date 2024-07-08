@@ -61,6 +61,8 @@ def fetch_and_populate_suppliers():
             }
             supplierList.append(supplier_data)
         
+        print(f"supplierList refreshed {len(supplierList)}")
+        
     else:
         st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
 
