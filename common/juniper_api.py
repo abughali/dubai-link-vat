@@ -167,7 +167,7 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                    # "Service": get_category_name(supplier_id)
                 }
 
-                print(f"{invoice_number:<8}{item_amount:<12.2f}{taxes:<10.2f}{currency:<6}")
+                st.write(f"{invoice_number:<8}{item_amount:<12.2f}{taxes:<10.2f}{currency:<6}")
 
 
                 invoices.append(line_data)
