@@ -35,11 +35,11 @@ def create_raw_imported(df, workbook):
     # Calculate the last data row dynamically
     rows = len(df) + 1
 
-    # Add totals for column J
-    worksheet.write_formula(rows, 9, f'=SUM(J2:J{rows})', total_format)
+    # Add totals for column N
+    worksheet.write_formula(rows, 13, f'=SUM(N2:N{rows})', total_format)
 
-    # Add totals for column K
-    worksheet.write_formula(rows, 10, f'=SUM(K2:K{rows})', total_format)
+    # Add totals for column O
+    worksheet.write_formula(rows, 14, f'=SUM(O2:O{rows})', total_format)
 
     worksheet.autofit()
 
@@ -97,7 +97,8 @@ def create_total_converted(df, workbook):
         st.stop()
 
     if area_not_found:
-        st.warning("These areas will be considered ROW: " + ", ".join(set(area_not_found)))
+        st.warning("These areas will be considered ROW: " + ", ".join(map(str, set(area_not_found))))
+
 
     df_copy = df.copy() 
                 

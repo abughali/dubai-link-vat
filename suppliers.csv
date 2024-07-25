@@ -1,49 +1,2236 @@
 Supplier Name,Service Type,Taxes Included
-Fly Dubai,Air Ticket,False
-Air Arabia,Air Ticket,False
-Emirates Airlines,Air Ticket,False
-Syria Link Travel & Tours,Air Ticket,False
-BSP IATA,Air Ticket,False
-HotelBeds Services,Excursion,False
-Avis Car,Excursion,False
-Transferz,Excursion,False
-Optimum Car Rental,Excursion,False
-Al Majlis Reservation Services,Excursion,False
-Tune Protect,Excursion,False
-Khalidiya Palace Rayhaan by Rotana,Excursion,True
-AAT Limousine L.L.C,Excursion,False
-Unique Masters,Excursion,True
-Peace Land Travel & Tourism L.L.C,Excursion,True
-AIRPORT PASSES MEET & ASSIST SERVICE,Excursion,False
-KOI Technologies FZCO,Excursion,False
-Rutwa Tourism LLC,Excursion,False
-Al Bahar Hotel & Resort,Hotel Reservation,False
-H2H - ExpediaRapid,Hotel Reservation,True
-25hours Hotel One Central,Hotel Reservation,False
-HCD-Derbysoft Hilton,Hotel Reservation,False
-Al Hamra Residence,Hotel Reservation,False
-DL - Payment Service Charge,Hotel Reservation,False
-H2H - HotelDoMexico,Hotel Reservation,False
 HotelBeds XML,Hotel Reservation,False
-H2H - DidaTravel,Hotel Reservation,True
-H2H - LCI (JWS),Hotel Reservation,True
+TouricoV85 XML,Hotel Reservation,False
+Juniper Transfer and Service Supplier,Hotel Reservation,False
+Direct contract Hotels Supplier,Visa,False
+Default supplier,Visa,False
+Jumeirah Living - World Trade Center Residence,Excursion,False
 HotelBeds Services,Hotel Reservation,False
-H2H - Agoda,Hotel Reservation,True
-Bookohotel - XML,Hotel Reservation,True
-Al Majaz Premiere Hotel Apartments,Hotel Reservation,False
+Premier Limosine,Hotel Reservation,False
+Destinations of the World,Hotel Reservation,False
+Travco XML,Hotel Reservation,False
+Test Francesca,Visa,False
+LotsofHotels XML,Hotel Reservation,False
+Test Hotel Miqdad,Visa,False
+Privilege Luxury Car Transport & Rental,Hotel Reservation,False
+Funsho Signature Limousine LLC,Excursion,False
+Unique Masters,Hotel Reservation,False
+Atlantis The Palm,Excursion,False
+GTA Hotels,Hotel Reservation,False
+Icon Delux Hotel Apartment,Excursion,False
+Abjar Grand Hotel,Excursion,False
+Ajman Saray,Excursion,False
+Al Ain Rotana,Excursion,False
+Al Barsha Hotel Apartments,Excursion,False
+Amwaj Rotana Jumeirah Beach Test Purpose only,Visa,False
+Millennium Plaza Downtown Hotel,Excursion,False
+City Premiere Shiekd Zayed Road,Excursion,False
+Al Bustan Center and Residence DY,Hotel Reservation,False
+Al Bustan Rotana Dubai,Excursion,False
+Swissotel Al Ghurair  Hotel Dubai,Excursion,False
+Swissotel living al ghurair,Excursion,False
+Al Jawhara Gardens Hotel,Excursion,False
+Al Jawhara Hotel Apartments,Excursion,False
+Al Maha Arjaan by Rotana,Excursion,False
+Al Manzil Hotel,Excursion,False
+Al Murooj Rotana Dubai,Excursion,False
+Madinat Jumeirah,Excursion,False
+Al Rawda Arjaan By Rotana,Excursion,False
+RODA HOTELS AMWAJ SUITES,Excursion,False
+Anantara Dubai The Palm Resort & Spa,Excursion,False
+Anantara Sir Bani Yas Island Al Sahel Villa Resort,Excursion,False
+Anantara Sir Bani Yas Island Al Yamm Villas,Excursion,False
+Arabian Courtyard Hotel & Spa,Excursion,False
+Arabian Park Hotel Dubai,Excursion,False
+Arjaan by Rotana,Excursion,False
+Armani Hotel Dubai,Excursion,False
+Ascott Park Place Dubai,Excursion,False
+Auris Hotel Apartment Deira,Excursion,False
+elite byblos (ex coral albarsha),Excursion,False
+Avari Dubai Hotels & Apartments,Excursion,False
+Avari Hotel Apartments Al Barsha Dubai,Excursion,False
+Avenue Hotel Dubai,Excursion,False
+Banyan Tree Al Wadi,Excursion,False
+Beach Rotana,Excursion,False
+Voco Bonnington Dubai,Excursion,False
+Boutique7 Hotel & Suites,Excursion,False
+Burj Al Arab,Excursion,False
+BurJuman Arjaan by Rotana,Excursion,False
+Social Hotel ex Byblos,Excursion,False
+Capitol Hotel,Excursion,False
+Carlton Tower Hotel,Excursion,False
+Cassells Hotel Apartment Abu Dhabi,Excursion,False
+Centro Barsha Dubai,Excursion,False
+Centro Al Manhal Rotana Abu Dhabi,Excursion,False
+City Premiere Marina Hotel Apartments,Excursion,False
+City Seasons Hotel,Excursion,False
+City Seasons Suites Dubai,Excursion,False
+Conrad Dubai,Excursion,False
+COPTHORNE HOTEL DUBAI,Excursion,False
+Coral Boutique Villas,Visa,False
+Cosmopolitan Hotel Dubai,Excursion,False
+Coral Deira,Excursion,False
+The Cove Rotana Resort,Visa,False
+Crowne Plaza Abu Dhabi Yas Island,Excursion,False
+Crowne Plaza  Dubai - Deira,Excursion,False
+Crowne Plaza Dubai Festival City,Excursion,False
+DAMAC Hotels Management LLC,Excursion,False
+Deira Suites,Excursion,False
+Qasr Al Sarab Desert Resort & Spa by Anantara DXB,Excursion,False
+Qasr Al Sarab Desert Resort & Spa by Anantara,Excursion,False
+Meliá Desert Palm Dubai,Excursion,False
+DoubleTree by Hilton Dubai Jumeirah Beach,Excursion,False
+DoubleTree by Hilton Hotel & Residences Dubai -Al,Excursion,False
+DoubleTree by Hilton Ras Al Khaimah,Excursion,False
+Dubai Marine Resort,Excursion,False
+The Apartments Dubai World Trade Centre,Excursion,False
+Dusit Princess Residences Dubai marina,Excursion,False
+Dusit Thani Dubai,Excursion,False
+Eastern Mangroves Hotel & Spa By Anantara,Excursion,False
+Residence Inn by Marriott Sheikh Zayed Road,Excursion,False
+Emirates Palace,Excursion,False
+Fairmont Bab Al Bahr,Excursion,False
+Fairmont Dubai,Excursion,False
+Fairmont The Palm,Excursion,False
+MD Hotel EX (Cassells Al Barsha Hotel ),Excursion,False
+Howard Johnson Plaza By Wyndham Dubai Deira,Excursion,False
+FLORA CREEK HOTEL APARTMENTS,Excursion,False
+FLORA PARK HOTEL APARTMENTS,Excursion,False
+Four Points by Sheraton Bur Dubai,Excursion,False
+Four Points by Sheraton - Sheikh Zayed Road,Excursion,False
+Fraser Suites Dubai,Visa,False
+Fujairah Rotana Resort & Spa,Excursion,False
+Two Seasons Hotel & Hotel Apmnt FZ-LLC ex gloria,Excursion,False
+Golden Sands 03 Hotel Apartments,Excursion,False
+Golden Sands 10 Hotel Apartments,Excursion,False
+Grand Belle Vue Hotel Apartment,Visa,False
+Grand Excelsior Hotel,Excursion,False
+Grand Excelsior Hotel Bur Dubai,Excursion,False
+Grand Hyatt Dubai,Excursion,False
+Grand Midwest Tower Hotel / Hotel Apartments,Excursion,False
+GRAND MILLENNIUM DUBAI HOTEL,Excursion,False
+Grandeur Hotel Al Barsha,Excursion,False
+GROSVENOR HOUSE,Excursion,False
+Habtoor Grand Beach Resort & Spa,Excursion,False
+Hala Arjaan By Rotana,Excursion,False
+HALLMARK HOTEL,Visa,False
+Ramada Hotel & Suites by Wyndham JBR / Ex: HSW,Excursion,False
+Hilli Rayhaan by Rotana,Excursion,False
+"Radisson Blu Hotel & Resort,ex hilton AUH",Excursion,False
+Hilton Al Ain Hotel,Excursion,False
+Golden Sands Hotel Creek EX (Hilton Dubai Creek),Excursion,False
+HILTON DUBAI JUMEIRAH RESORT & RESIDENCES,Excursion,False
+Hilton Fujairah Resort,Excursion,False
+AL MAIRID RESORT RAS AL KHAIMAH,Excursion,False
+HILTON SHARJAH,Excursion,False
+Holiday Inn Al Barsha Hotel,Excursion,False
+Holiday Inn Express Dubai International Airport,Excursion,False
+Holiday Inn Express Dubai Internet City,Excursion,False
+Holiday Inn Express Dubai Jumeirah,Excursion,False
+Holiday Inn Express Safa Park,Excursion,False
+Hyatt Place Hotel Dubai,Excursion,False
+Hyatt Regency Dubai,Excursion,False
+Ibis Al Barsha,Excursion,False
+IBIS AL RIGGA,Excursion,False
+IBIS DEIRA CITY CENTRE,Excursion,False
+IBIS MALL OF THE EMIRATES,Excursion,False
+OAKS Ibn Battuta Gate,Excursion,False
+InterContinental Dubai Festival City,Excursion,False
+InterContinental Residence Suites Dubai Festival C,Excursion,False
+JannahH Hotels & Resorts,Excursion,False
+Jumeira Rotana,Excursion,False
+Conrad Abu Dhabi Etihad Towers ( ex Jumeirah A,Excursion,False
+Jumeirah Beach Hotel,Excursion,False
+Jumeirah Creekside Hotel,Excursion,False
+Jumeirah Emirates Towers,Excursion,False
+Jumeirah Zabeel Saray,Excursion,False
+JW Marriott Marquis Hotel Dubai,Excursion,False
+Kempinski Hotel Mall of the Emirates,Excursion,False
+Khalidiya Palace Rayhaan by Rotana,Excursion,False
+Le Meridien Minaseyahi Beach Resort and Marina,Excursion,False
+THE WESTIN DUBAI MINA SEYAHI BEACH RESORT & MARINA,Excursion,False
+Kempinski Hotel & Residences Palm Jumeirah,Excursion,False
+Al Deyafa Hotel Apartments,Excursion,False
+Marmara Deluxe Hotel Apartments,Excursion,False
+LE ROYAL MERIDIEN BEACH RESORT & SPA,Excursion,False
+Legacy Hotel Apartments,Excursion,False
+Lotus Downtown Metro Deira Dubai,Excursion,False
+Lotus Grand Hotel Apartments,Excursion,False
+Majestic City Retreat Hotel,Excursion,False
+Dubai Marriott Harbour Hotel & Suites,Excursion,False
+Marina Byblos Hotel,Excursion,False
+Marina View Hotel Aprtment,Excursion,False
+Mercure Hotel Apartments Dubai Barsha Heights,Excursion,False
+Media Rotana Dubai,Excursion,False
+Park Hyatt,Excursion,False
+Yas Island Rotana,Excursion,False
+Park Rotana Abu Dhabi,Excursion,False
+Mercure Grand Hotel Jebel Hafeet,Excursion,False
+Warwick Hotel Dubai,Excursion,False
+Pullman Dubai Creek City Centre,Excursion,False
+Knight Castle Hotel Ex carlton tower,Visa,False
+Waldorf Astoria Ras Al Khaimah,Excursion,False
+MILLENNIUM  HOTEL ABU DHABI,Excursion,False
+"THE TOWER PLAZA HOTEL, DUBAI",Excursion,False
+Mövenpick Hotel & Apartments Bur Dubai,Excursion,False
+Mövenpick Hotel Deira,Excursion,False
+Waldorf Astoria Dubai Palm Jumeirah,Excursion,False
+Mövenpick Hotel Jumeirah Beach,Excursion,False
+"Radisson Blu Hotel, Dubai Deira Creek",Excursion,False
+Movenpick Hotel Jumeirah Lake Towers,Excursion,False
+Villa Rotana Suites Dubai,Excursion,False
+Vida Hotels and Resorts,Excursion,False
+Naia Garden Park,Visa,False
+W Abu Dhabi – Yas Island,Excursion,False
+Nassima Tower Hotel Apartments.,Excursion,False
+Nojoum Hotel Apartments,Excursion,False
+Nour Arjaan by Rotana,Excursion,False
+Novotel Hotel Al Barsha,Excursion,False
+Novotel Hotel Deira City Centre,Excursion,False
+Blue Beach Tower,Excursion,False
+Ocean View Hotel,Visa,False
+One&Only The Palm,Excursion,False
+One&Only Royal Mirage,Excursion,False
+M Hotel Downtown by Millennium,Excursion,False
+SHERATON ABU DHABI HOTEL & RESORT,Excursion,False
+"Radisson Blu Hotel, Dubai Media City",Excursion,False
+Radisson Blu Sharjah,Excursion,False
+Sheraton Dubai Mall of the Emirates Hotel,Excursion,False
+SHERATON GRAND HOTEL,Excursion,False
+Radisson Royal Hotel,Excursion,False
+Raffles Dubai,Excursion,False
+SHERATON JUMEIRAH BEACH RESORT,Excursion,False
+RAMADA Downtown Burj Dubai Hotel,Excursion,False
+Signature Hotel Al Barsha,Excursion,False
+Ramada Hotel & Suites Ajman,Excursion,False
+Delta Hotels by Marriot / EX: Ramada Plaza JBR,Excursion,False
+Towers Rotana Dubai,Excursion,False
+Tulip In FZ LLC Knowledge Village,Hotel Reservation,False
+Time Ruby Hotel Appartments,Excursion,False
+Best Western Premier Deira Hotel,Excursion,False
+Tulip Inn Sharjah Hotel Appartments,Excursion,False
+Time Topaz Hotel Appartments,Excursion,False
+The Anantara Downtown Dubai Hotel ex oberoi dxb,Excursion,False
+The Palace Downtown Dubai,Excursion,False
+The Ritz-Carlton,Excursion,False
+The Ritz Carlton Abu Dhabi,Excursion,False
+TIME Crystal Hotel Apartment,Excursion,False
+TIME Grand Plaza Hotel,Excursion,False
+TIME Oak Hotels & Suites,Excursion,False
+Time Opal Hotel Appartments,Excursion,False
+SOFITEL DUBAI DOWNTOWN,Excursion,False
+Sofitel Dubai Jumeirah Beach,Excursion,False
+Sofitel The Palm,Excursion,False
+Somewhere Hotel Apartments,Excursion,False
+Sourthern Sun Abu Dhabi,Excursion,False
+The St. Regis Abu Dhabi,Excursion,False
+Star Metro Deira Hotel Apartments,Excursion,False
+StayBridge Suite Abu Dhabi Yas Island,Excursion,False
+SUHA City Hotel,Excursion,False
+Suite Novotel Mall Of the Emirates,Excursion,False
+Jood Palace Hotel Dubai,Excursion,False
+Tamani Hotel Marina,Excursion,False
+The Address Downtown Dubai,Excursion,False
+Kempinski Central Avenue Hotel ex address dubai mall,Excursion,False
+The Address Dubai Marina,Excursion,False
+The Address Montgomerie Dubai,Excursion,False
+THE MEYDAN,Excursion,False
+The H Hotel,Excursion,False
+Test Accounting,Visa,False
+Ramada Hotel Dubai,Excursion,False
+Flora Square Hotel Dubai,Excursion,False
+Holiday International Hotel – Embassy district,Excursion,False
+Imperial Hotel Apartments,Excursion,False
+"The Canvas Dubai, MGallery by Sofitel",Excursion,False
+Khalidia Hotel Apartment,Excursion,False
+Miramar Al Aqah Beach Resort,Excursion,False
+Ramada Abu Dhabi,Excursion,False
+Taj Dubai Hotel,Excursion,False
+Royalton Hotel,Visa,False
+Copthorne Hotel Sharjah,Excursion,False
+Reflection Hotel Dubai,Excursion,False
+Riveira Hotel,Excursion,False
+Movenpick Hotel & Apartments Bur Dubai,Excursion,False
+Movenpick Hotel Jumeirah Beach,Excursion,False
+Rixos The Palm Dubai,Excursion,False
+Samaya Hotel Deira,Excursion,False
+Shangri-La Hotel Dubai,Excursion,False
+"The Ritz-Carlton, DIFC",Excursion,False
+Desert Islands Resort & Spa By Anantara,Excursion,False
+St Regis Hotel Abu Dhabi,Excursion,False
+Banyan Tree - Ras Al Khaimah Beach,Excursion,False
+Rixos Bab Al Bahr Ras Al Khaimah,Excursion,False
+Al Qasr at Madinat Jumeirah,Excursion,False
+Dar Al Masyaf at Madinat Jumeirah,Excursion,False
+The Ritz-Carlton Dubai International Financial Cen,Excursion,False
+Jumeirah Zabeel Saray Royal Residences,Excursion,False
+Khalidia Hotel Apartments,Excursion,False
+Landmark Grand Hotel,Excursion,False
+Landmark Hotel Riqqa,Excursion,False
+Marriott Hotel Al Jaddaf,Excursion,False
+Panorama Grand Hotel,Excursion,False
+Panorama Hotel Burdubai,Excursion,False
+Panorama Hotel Deira,Excursion,False
+Damac Maison The Vogue,Excursion,False
+NAIA Breeze,Visa,False
+Ivory Grand Hotel Aparments Al Barsha,Excursion,False
+Golden Tulip Deira,Excursion,False
+Ghaya Grand Hotel,Excursion,False
+Fortune Hotel Apartments Bur Dubai,Excursion,False
+Comfort Inn Hotel,Excursion,False
+Abidos Hotel Apartment Dubailand,Excursion,False
+Versailles Hotel Dubai,Excursion,False
+Suha Hotel Apartments,Excursion,False
+Hyde Park Hotel Bur Dubai,Excursion,False
+Ramee Rose Hotel,Excursion,False
+Fortune Pearl Hotel Deira Dubai,Excursion,False
+Fortune Grand Hotel Deira Dubai,Excursion,False
+Rose Rayhaan Dubai by Rotana,Excursion,False
+Fortune Grand Hotel Apartments Bur Duba,Excursion,False
+Al Raya Hotel Apartments Dubai,Excursion,False
+Grand Midwest Express Hotel Apartments Discovery G,Excursion,False
+Grand Midwest Reve Hotel Apartments Tecom Al Barsh,Excursion,False
+Grand Midwest Boutique Hotel Al barsha Sheikh Zaye,Excursion,False
+Nejoum Al Emarate Hotel Sharjah,Excursion,False
+Delmon Hotel,Excursion,False
+Fairmont Ajman,Excursion,False
+Emirates Grand Hotel Apartments,Excursion,False
+Aryana Hotel Sharjah,Excursion,False
+Skyline Hotel Apartment,Excursion,False
+Iberotel Miramar Al Aqah Beach Resort - Fujairah,Excursion,False
+Park Hyatt Abu Dhabi Hotel And Villas,Excursion,False
+Crowne Plaza Jumeirah  ex ramada jumeirah,Excursion,False
+Swiss Belhotel Sharjah,Excursion,False
+Sands Hotel Abu Dhabi,Excursion,False
+Southern Sun Abu Dhabi,Excursion,False
+Movenpick Hotel Apartments Al Mamzar Dubai,Excursion,False
+Pullman Residence Dubai Deira City Centre,Excursion,False
+Rihab Rotana Suites Dubai,Excursion,False
+Rimal Rotana Suites Dubai,Excursion,False
+Golden Sands Hotel & Residences,Excursion,False
+Centro Sharjah Rotana,Excursion,False
+Centro Yas Island Rotana Abu Dhabi,Excursion,False
+Oaks Liwa Heights Hotel Apartments,Excursion,False
+St. George Hotel Dubai,Excursion,False
+Amwaj Rotana Jumeirah Beach,Excursion,False
+Ramee Hotel Guestline Rigga,Excursion,False
+Asiana Hotel Deira,Excursion,False
+Landmark Hotel - Banyas Square,Excursion,False
+Landmark Plaza Hotel,Excursion,False
+Al Shams Plaza Hotel Apartments,Excursion,False
+Rain Tree Hotels Dubai,Excursion,False
+Hyatt Regency Dubai Creek Heights,Excursion,False
+Summit Hotel,Excursion,False
+City Stay Hotel Apartments Al Barsha,Excursion,False
+Al Khaleej Palace Hotel,Excursion,False
+Almanar Hotel Apartments,Excursion,False
+RODA BOUTIQUE VILLAS JUMEIRAH,Excursion,False
+Jannah Burj Al Sarab,Excursion,False
+Rose Garden Hotel Apartments,Excursion,False
+Adagio Al Barsha,Excursion,False
+Grandeur Hotel,Excursion,False
+Pullman Jumeirah Lakes Towers Dubai,Excursion,False
+Flora Al Souq Hotel,Excursion,False
+Flora Hotel Apartments,Excursion,False
+Desert Gate Toursim,Hotel Reservation,False
+North Tours,Visa,False
+Tour Dubai,Hotel Reservation,False
+Out Bound Supplier,Visa,False
+Double Tree by Hilton Resort & Spa Marjan Island,Excursion,False
+Hilton Capital Grand Abu Dhabi,Excursion,False
+Hilton Al Hamra Beach & Golf Resort,Excursion,False
+Bahi Ajman Palace Hotel,Excursion,False
+Al Jawhara Metro Hotel,Excursion,False
+City Stay Inn Hotel Apartment,Excursion,False
+City Stay Pearl Hotel Apartment,Excursion,False
+Fortune Hotel Deira Dubai,Excursion,False
+Le Meridien Dubai Hotel & Conference Centre,Excursion,False
+Park Hotel Apartments,Excursion,False
+Sun & Sky Al Rigga Hotel,Excursion,False
+Hotel without contract,Visa,False
+Raintree Rolla - Burdubai Hotel,Excursion,False
+Al Khoory Executive Hotel,Excursion,False
+Al Khoory  Hotel Apartment,Excursion,False
+Isa Link Agency,Visa,False
+Intercontinental Hotel Apartment Residence Suites,Excursion,False
+Four Seasons Resort Bali At Jimbaran Bay,Visa,False
+st regis hotel bali resort,Visa,False
+Jac Travel XML,Hotel Reservation,False
+Adagio Al Bustan Abu Dhabi,Excursion,False
+Novotel Abu Dhabi Al Bustan,Excursion,False
+JW Marriott Dubai Hotel,Excursion,False
+Novotel Dubai World Trade Centre,Excursion,False
+Ibis Dubai World Trade Centre,Excursion,False
+Al Nawras Hotel Apartments,Excursion,False
+Flora Al Barsha Hotel DXB,Excursion,False
+Ramee Hotel Apartments,Excursion,False
+Sharjah Grand Hotel,Excursion,False
+Golden Tulip Sharjah Hotel Apartments,Excursion,False
+Golden Tulip Al Thanyah,Visa,False
+Signature Inn Hotel Al Rigga,Excursion,False
+Al Bustan Hotel Sharjah,Excursion,False
+Al Majaz Premiere Hotel Apartments,Excursion,False
+Aloft Abu Dhabi,Excursion,False
+Centro Capital Centre,Excursion,False
+City Tower Hotel Fujairah,Excursion,False
+Donatello Hotel Dubai DY,Hotel Reservation,False
+Dream Palace Hotel Dubai,Excursion,False
+Four Seasons Resort Dubai at Jumeirah Beach,Excursion,False
+Golden Tulip Al Jazira Hotel and Resort Abu Dhabi‎,Excursion,False
+Golden Tulip Al Thanyah Hotel Apartments,Visa,False
+Intercontinental Dubai Marina,Excursion,False
+Marjan Island Resort & Spa,Excursion,False
+Montreal Hotel Dubai,Excursion,False
+Noon Hotel Apartments,Excursion,False
+St Regis Saadiyat Island Resort Abu Dhabi,Excursion,False
+up town rent A  car,Hotel Reservation,False
+Rasheed Ahmed Express LLC,Visa,False
+DL - Payment Service Charge,Visa,False
+Smana Hotel Al Raffa,Excursion,False
+Acacia By Bin Majid Hotels & Resort,Excursion,False
+Adagio Aparthotel Fujairah,Excursion,False
+Admiral Plaza Hotel Dubai,Excursion,False
+Al Bustan Hotel Flats,Excursion,False
+Al Bustan Tower Hotel Suites,Excursion,False
+Armada Avenue Hotel Ex Armada BlueBay,Excursion,False
+Beach Hotel By Bin Majid Hotels & Resorts,Excursion,False
+Bin Majid Tower Hotel Apartments By Bin Majid Hote,Excursion,False
+City Hotel Ras Al Khaimah,Excursion,False
+Citymax Bur Dubai,Excursion,False
+Citymax Hotel Al Barsha,Excursion,False
+Citymax Sharjah,Excursion,False
+Concorde Hotel Fujairah,Excursion,False
+Ewan Ajman Suites Hotel,Excursion,False
+Gateway Hotel,Visa,False
+Ibis Fujairah,Excursion,False
+Welcome Hotel Apartments 1,Excursion,False
+Mangrove By Bin Majid Hotels & Resorts,Excursion,False
+Marina Hotel Apartments,Excursion,False
+Milestone Hotel Apartment,Excursion,False
+Royal M Hotel Fujairah,Excursion,False
+Nehal By Bin Majid Hotels & Resorts,Excursion,False
+Nihal Hotel Dubai,Excursion,False
+Novotel Fujairah,Excursion,False
+Nuran Marina Serviced Residences,Excursion,False
+Park Inn By Radisson Hotel Apartments - Al Barsha,Excursion,False
+Park Inn By Radisson Hotel Apartments - Al Rigga,Excursion,False
+Ramee Guestline Hotel Apartment 2,Excursion,False
+Ramee Royal Hotel Dubai,Excursion,False
+Regal Plaza Hotel,Excursion,False
+Regent Palace Hotel,Excursion,False
+Royal Rose Hotel Abu Dhabi,Excursion,False
+Summerland Motel Sharjah,Excursion,False
+The Westin Abu Dhabi Golf Resort & Spa,Excursion,False
+Umm Al Quwain Beach Hotel,Excursion,False
+Welcome Hotel Apartments 2,Excursion,False
+Courtyard by Marriott Dubai Green Communit,Excursion,False
+Marriott Executive Apartments Dubai Creek,Excursion,False
+Beach Resort By Bin Majid Hotels & Resorts,Excursion,False
+sindbad tours LLC,Hotel Reservation,False
+MAHMOUD AWAAD (london),Visa,False
+AAA Rent A Car,Hotel Reservation,False
+Al Majlis Reservation Services,Hotel Reservation,False
+Leading Business Centre,Visa,False
+Tour Guide,Hotel Reservation,False
+Al Hallab  Restaurant,Hotel Reservation,False
+Vista Jet,Air Ticket,False
+Al Raha Beach Hotel,Excursion,False
+Voco Dubai (Ex. Nassima Royal Hotel),Excursion,False
+Millennium Central Dubai Downtown ex m hotel,Excursion,False
+TPV fee,Visa,False
+BSP IATA,Air Ticket,False
+Air Arabia,Air Ticket,False
+Fly Dubai,Air Ticket,False
+Dnata Dubai,Air Ticket,False
+Direct Airlines,Air Ticket,False
+Mesatours Tourism & Travel,Visa,False
+Tourism With Style,Visa,False
+Bita  Tourism,Hotel Reservation,False
+Akqua Sun,Visa,False
+World Avenues,Visa,False
+Quantum,Visa,False
+Two’s Company,Visa,False
+Extranet Supplier Dakkak Tours International DMC,Hotel Reservation,False
+Aspire Heavenly Holidays,Visa,False
+Capital Travel & Tours,Visa,False
+Tropical Isle Collections Maldives,Visa,False
+Red Apple,Visa,False
+Jnan Tours Master,Others,False
+Egypt Express,Hotel Reservation,False
+Escales International,Others,False
+Supreme Services,Others,False
+C Germany,Others,False
+CBS Travel Asia Co. Ltd.,Others,False
+Fokus Indonesia,Others,False
+Iscra Travel,Others,False
+Mustashar Holidays,Others,False
+Regency Holidays,Others,False
+Extranet Supplier Team America,Hotel Reservation,False
+Fuego Travel and Tours,Others,False
+Avis Car,Hotel Reservation,False
+The Traveller,Others,False
+Mayflower,Others,False
+White Sand,Others,False
+Je Voyage,Others,False
+Mezoon Travels,Others,False
+Apollo Holidays,Others,False
+Prime Travel Agency,Others,False
+Jetwing Travels (Pvt) Ltd,Others,False
+Travstore,Others,False
+TA center,Others,False
+Carthage Travel & Events,Others,False
+Ocean Dusk,Others,False
+Saltours,Others,False
+Blacklane GmbH,Hotel Reservation,False
+EuropCar,Hotel Reservation,False
+Lawand Tours,Others,False
+Great Moments Tours,Others,False
+Akbar Travels of India,Air Ticket,False
+francesca Test Supplier,Others,False
+Pearl Assist,Others,False
+Test MasterCard,Others,False
+Chandelier,Others,False
+Al Waleed Palace Hotel Apartment Al Barsha,Excursion,False
+Al Waleed Palace Hotel Apartments Dubai,Excursion,False
+Auris Boutique Hotel Apartments,Excursion,False
+bluebay black stone hotel,Excursion,False
+City Stay Prime Hotel Apartment,Excursion,False
+Emirates Concorde Hotel & Apartments,Excursion,False
+First Central Hotel Apartments,Excursion,False
+Fortune Boutique Hotel,Excursion,False
+Hilton Garden Inn Dubai Al Mina,Excursion,False
+Hilton Garden Inn Dubai Al Muraqabat,Excursion,False
+Ibis Styles Dubai Jumeira Hotel,Excursion,False
+Ibis Styles Hotel Dragon Mart Hotel,Excursion,False
+Index Hotel,Others,False
+Lavender Hotel,Excursion,False
+London Crown 1 Hotel Apartments,Others,False
+London Crown 2 Hotel Apartment,Others,False
+London Crown Hotel - Dubai,Excursion,False
+Mafraq Hotel & Resort,Excursion,False
+Majlis Grand Mercure Residence,Excursion,False
+"Marriott Executive Apartments Al Jaddaf, Dubai",Excursion,False
+Melody Queen Hotel,Excursion,False
+Naif Index Hotel,Excursion,False
+Ramada Beach Hotel Ajman,Excursion,False
+Carlton Al Barsha,Excursion,False
+Ramada Deira,Excursion,False
+Raviz Center Point Hotel,Excursion,False
+Royal Prince Hotel,Others,False
+Grand Excelsior Hotel Deira,Excursion,False
+Sheraton Dubai Creek Hotel and Towers,Excursion,False
+Sheraton Sharjah Beach Resort & Spa,Excursion,False
+Steigenberger Hotel,Excursion,False
+Habtoor Palace part of Hilton’s new LXR Collection,Excursion,False
+Valencia Tours,Others,False
+Prime Limousine,Hotel Reservation,False
+AXA Insurance (Gulf) B.S.C.,Hotel Reservation,False
+Pullman Dubai Downtown dxb,Excursion,False
+Pullman Dubai Downtown,Excursion,False
+Gulf Oasis Hotel Apartment,Excursion,False
+Nurai Island Hotel,Excursion,False
+Atana Hotel,Excursion,False
+Hilton Garden Inn Dubai Mall Of The Emirates,Excursion,False
+Al Wasl Passenger Yachts and Boat Rental L.L.C.,Hotel Reservation,False
+Yellow Boat Tours,Hotel Reservation,False
+Danial Restaurant,Hotel Reservation,False
+Dubai Aquarium,Hotel Reservation,False
+Beirut Lounge,Others,False
+Ayla Bawadi Hotel,Excursion,False
+Bab Al Shams Desert Resort & Spa,Excursion,False
+Dusit Thani Abu Dhabi,Excursion,False
+Hotel ibis One Central,Excursion,False
+Movenpick Hotel Deira,Excursion,False
+Palazzo Versace Dubai,Excursion,False
+Rose Charms JLT,Others,False
+Wyndham Dubai Marina,Excursion,False
+Alpha Destination Management,Visa,False
+My Limo  Luxury Transportation Service -UAE,Hotel Reservation,False
+Ice train Ticket,Hotel Reservation,False
+VIP YACHTS LLC,Others,False
+fly Nas,Air Ticket,False
+Travel With Flair (Pty) LTD,Others,False
+Nikki Beach Resort & Spa Dubai,Excursion,False
+Rosewood Abu Dhabi,Excursion,False
+Expedia (EAN),Hotel Reservation,False
+Number One Tower Suites Dubai,Excursion,False
+Jannah Place Abu Dhabi,Excursion,False
+Jannah Eastern Mangroves Suites,Excursion,False
+"Shangri-La Hotel, Qaryat al Beri",Excursion,False
+"Shangri-La Residences, Qaryat al Beri",Excursion,False
+ORIENT TOURS LLC - DUBAI,Others,False
+Valley Of Tourism Turkey,Others,False
+Beauty Travel,Others,False
+Rove Downtown Dubai,Excursion,False
+Suba Hotel,Excursion,False
+Crown Palace Hotel,Excursion,False
+Andalus Al Seef Resort & Spa,Excursion,False
+Hawthorn Suites by Wyndham Abu Dhabi City Center,Excursion,False
+Jannah Marina Hotel Apartments,Excursion,False
+Jumeirah Al Naseem,Others,False
+LA VERDA,Others,False
+Mercure Gold Hotel,Excursion,False
+Royal Ascot Hotel Dubai,Excursion,False
+Tulip Creek Hotel Apartments,Excursion,False
+Traders Hotel,Excursion,False
+Dnata Travel Qatar,Air Ticket,False
+Hotel HUES Boutique Hotels,Others,False
+White Moon Car Rental,Hotel Reservation,False
+Ramada by Wyndham Barsha heights EX (Auris Inn Al,Excursion,False
+Air Charter Service,Air Ticket,False
+Jaypee Vasant Continental,Others,False
+German Australian Travel and Tours,Others,False
+German Australian Travel,Others,False
+H2H- AlbaTravel,Hotel Reservation,False
+Rayan Hotel,Others,False
+METRO TRAVEL - TAHRIR 1,Others,False
+Holidays Link Travel & Tours,Excursion,False
+AVANI Deira Dubai Hotel,Excursion,False
+Emirates Airlines,Air Ticket,False
+Dar Al Takaful,Others,False
+InterContinental Cairo Citystars Hotel,Others,False
+Hotel De Sers,Others,False
+"Park Hyatt Jeddah-Marina,Club and Spa",Others,False
+Sofitel Jeddah Corniche,Others,False
+Al Wasl Yachts & Dhow Cruise,Hotel Reservation,False
+Jumeirah Lowndes Hotel,Others,False
+Radisson Blu Residence Dubai Marina,Excursion,False
+Mandarin Oriental Hotel Paris,Others,False
+"Prince de Galles, a Luxury Collection Hotel",Others,False
+Intercontinental Carlton Cannes,Others,False
+Grand Hyatt Cannes Hôtel Martinez,Others,False
+Hotel  Le Fouquets  Cannes,Others,False
+Heli Air Monaco,Air Ticket,False
+Novotel basel city,Others,False
+Syria Link Travel & Tours,Hotel Reservation,False
+V Hotel Curio Collection By Hilton,Excursion,False
+Grand Hyatt Residence - Dubai Hotel Apartments,Excursion,False
+Atrium Hotel Luxury resorts,Others,False
+Jumeirah Messilah Beach Hotel & Spa,Others,False
+The Regency Hotel Kuwait,Others,False
+Buchinger Wilhelmi Uberlingen,Others,False
+Hotel Hassler Roma,Others,False
+Baglioni Hotel Regina,Others,False
+Hotel Savoy Florence,Others,False
+2000 LIMOUSINE SERVICE DI ANGELO FRATINI,Hotel Reservation,False
+EL PALACE BARCELONA,Others,False
+W BARCELONA,Others,False
+Delmon Palace Hotel,Excursion,False
+Marbella Club Hotel,Others,False
+Luxury Plus Rent a Car JLT,Others,False
+We Drive Rent a Car,Others,False
+Kempinski Hotel Ajman,Excursion,False
+Starling Geneva Hotel & Conference Center,Others,False
+Insiders Tourism,Others,False
+Premier Inn Dubai International Airport Hotel,Excursion,False
+Al Khoory Atrium Hotel,Excursion,False
+Sha Wellness Clinic,Others,False
+Buchinger Wilhelmi Marbella,Others,False
+Hotel Arts Barcelona,Others,False
+THE WESTIN BEIJING FINANCIAL STREET,Excursion,False
+The Peninsula Tokyo,Others,False
+Golden Tourist For Travel &Tourism,Others,False
+Roadrunner Services,Others,False
+Ascot Hotel,Excursion,False
+Four Seasons Hotel Abu Dhabi at Al Maryah Island,Excursion,False
+Hilton Dubai Al habtoor City,Excursion,False
+"Sheraton Addis, a Luxury Collection Hotel",Others,False
+Fairmont Chateau Laurier,Others,False
+SALLES MALAGA CENTRO,Others,False
+Al Manar Grand Hotel Apartment,Excursion,False
+Bab al qasr hotel,Excursion,False
+Dubai Grand Hotel by Fortune,Excursion,False
+Fortune Karama Hotel,Excursion,False
+Four Seasons Hotel Dubai International Financial C,Excursion,False
+Signature Hotel Aptmts & Spa (ex.lotus marina),Excursion,False
+Mayfair Hotel,Others,False
+RODA METHA SUITES,Excursion,False
+Royal Beach Resort & Spa,Excursion,False
+The Galleria Residence,Others,False
+"Traders Hotel, Qaryat Al Beri",Excursion,False
+ZiQoo Hotel Apartment Dubai,Others,False
+SLS Hotel at Beverly Hills,Excursion,False
+Le Meridien Vienna,Others,False
+Hotel Sacher Wien,Others,False
+The Oberoi Madina,Others,False
+Carawan Al Fahad Hotel,Others,False
+Rove City Centre hotel,Excursion,False
+Indigo Airlines,Air Ticket,False
+Metropolitan Hotel Dubai,Excursion,False
+Parkside Suites - Discovery Gardens,Excursion,False
+Ritz-Carlton Montreal,Others,False
+Signature 1 Hotel Tecom EX ( Somewhere Hotel ),Excursion,False
+Al Rais Travel for Cebu Pacific Dubai UAE,Others,False
+Jumeirah Vittaveli Maldives,Others,False
+Jnan Tours Doha,Others,False
+Millennium Airport Hotel Dubai,Excursion,False
+Trail Blazer Tours (India) Private Limited.,Others,False
+"The Ritz-Carlton, Guangzhou",Others,False
+"Shangri-La Hotel, Guangzhou",Others,False
+Landmark Fujairah Hotel,Excursion,False
+Rotana Star Rent A Car LLC,Hotel Reservation,False
+Four Seasons Hotel Bahrain Bay,Others,False
+Italcamel travel agency,Others,False
+Travel Connection Maldives,Others,False
+Vania VECCHIETTI,Others,False
+Selections Restaurant & Aquarius Pool Bar,Others,False
+Latest Recipe,Others,False
+Petek Restaurant Abu Dhabi,Excursion,False
+LE MERIDIEN ABU DHABI,Excursion,False
+Marsa Malaz Kempinski  Doha,Others,False
+Desert Adventures Tourism,Others,False
+dusitD2 kenz hotel - dubai,Excursion,False
+easyHotel Jebel Ali Dubai,Excursion,False
+Four Seasons Guangzhou Hotel,Others,False
+The Ritz-Carlton Shanghai,Others,False
+Imperial Suites Hotel,Others,False
+Atlantic Palace Agadir Golf,Others,False
+Crystal Plaza Hotel,Excursion,False
+Mandarin Oriental New York,Others,False
+Visa Account,Hotel Reservation,False
+Royal Maxim Palace Kempinski Cairo,Others,False
+A O N E LUXURY EXOTICS CAR,Hotel Reservation,False
+Avenue Rent A Car LLC,Excursion,False
+The Dorchester,Others,False
+Circles For Investments,Others,False
+Kempinski The Boulevard Dubai ex address boulevard,Excursion,False
+Roda Al Murooj Suites & Apartments,Excursion,False
+Roda Al Bustan Dubai Airport Hotel,Excursion,False
+Rove Healthcare City,Excursion,False
+Novotel Suite Riyadh Olaya,Others,False
+NADIALATLLAT KSA,Others,False
+SHERATON ZURICH HOTEL,Others,False
+Golden Hotel Jeddah,Others,False
+Plaça de la Rosa dels Vents,Others,False
+Budget Car and Van Rental - UAE,Others,False
+EO ITUR,Others,False
+Lapita Dubai Parks and Resorts,Excursion,False
+Fairmont Fujairah,Excursion,False
+CROWNE PLAZA BERLIN CITY CENTRE,Others,False
+Al Wadi Desert Ras Al Khaimah,Excursion,False
+The Oberoi Beach Resort Al Zorah UAE,Excursion,False
+Flora Al Barsha Hotel Dubai,Excursion,False
+City Seasons Towers Hotel,Excursion,False
+Progressive Car Rental and Limo,Others,False
+AL SALAM HOTEL SUITES,Excursion,False
+Hotel NVY Geneva,Others,False
+Shahzaib Hussain (Freelancer),Others,False
+Grand Hotel Kempinski Geneva,Others,False
+Worldwide DMC,Excursion,False
+Park Regis Kris Kin Hotel,Excursion,False
+Arabian Co. For Travelers Services,Others,False
+InterContinental Abu Dhabi,Excursion,False
+Royal Continental Hotel,Others,False
+THEOXENIA PALACE KIFISSIA HOTEL,Others,False
+Dubai  Exotic limo,Hotel Reservation,False
+Hotel Novotel Genève Centre,Others,False
+Ermitage Wellness & Spa hotel,Others,False
+45 Park Lane,Excursion,False
+Beau Rivage Geneve,Others,False
+Grosvenor House Suites,Excursion,False
+Grosvenor House Suites by Jumeirah Living,Excursion,False
+Mamlakat Al Asfar Travel & Tourism,Others,False
+Crowne Plaza  Al Khobar,Others,False
+Four Seasons Resort The Nam Hai Hoi An Vietnam,Others,False
+LA VILLE HOTEL & SUITES CITY WALK DUBAI,Excursion,False
+Lawand Tourism,Others,False
+DUKES DUBAI,Excursion,False
+Xclusive Yachts,Others,False
+Air India express,Air Ticket,False
+Madinah Hilton,Others,False
+Mosimann’s Private Dining Club,Others,False
+Four Seasons Hotel Riyadh at Kingdom Centre,Others,False
+Al Habtoor Polo Resort,Excursion,False
+Oceanic Khorfakkan Resort & Spa,Excursion,False
+MOSCOW HOTEL,Others,False
+BROADWAY HOTEL,Excursion,False
+Al Sarab Hotel,Excursion,False
+Dar Al Taqwa Hotel Madinah,Others,False
+Hilton Munich Airport,Others,False
+Millennium Hotel London Mayfair,Others,False
+UTM,Others,False
+Orchid Hotel Dubai,Excursion,False
+kinda holidays (CR A/C),Others,False
+Nirvana Travels (CR A/C),Others,False
+Marbella Resort Sharjah,Excursion,False
+Hotel Holiday International Sharjah,Excursion,False
+Hyatt Regency Dubai creek Heights Residence,Excursion,False
+The Chelsea Harbour Hotel,Others,False
+Wizz Air Hungary,Air Ticket,False
+Lanserhof,Others,False
+Four Seasons Hotel Casablanca,Others,False
+PULLMAN BARCELONA SKIPPER,Others,False
+The Biltmore Hotel Tbilisi,Others,False
+Sofitel Legend Metropole Hanoi,Excursion,False
+Le Méridien Barcelona,Others,False
+H2H - FastPay (JWS),Hotel Reservation,False
+The Retreat Palm Dubai Mgallery By Sofitel,Excursion,False
+MAKKAH HILTON & TOWERS,Others,False
+Al Tayer Travel CR/AC,Excursion,False
+Saffron Boutique Hotel,Others,False
+H2H - EscalaBeds (JWS),Hotel Reservation,False
+Ottila International FZE,Hotel Reservation,False
+Carlton Downtown Dubai,Excursion,False
+Verona Resort,Others,False
+DoubleTree By Hilton Woking,Others,False
+U3 for rent car,Others,False
+Ahlan  Cairo International Airport,Others,False
+Hilton Istanbul Bosphorus,Others,False
+Coral Beach Resort Sharjah,Excursion,False
+DoubleTree by Hilton Dubai - Business Bay,Excursion,False
+Sadaf Delmon Hotel,Others,False
+Grand Hotel Au Rond Point Des Pistes,Others,False
+NH ZURICH AIRPORT,Others,False
+Hotel Bristol Geneve,Others,False
+EXCELSIOR HOTEL GALLIA,Others,False
+Saudi Airlines,Air Ticket,False
+Ramada Continental Jeddah,Others,False
+Marriott’s Playa Andaluza,Others,False
+Marriott's Marbella Beach Resort,Others,False
+Marriott's Newport Coast Villas,Others,False
+Marriott's Village d'lle-de-France,Others,False
+MERAAS,Excursion,False
+Saroja Restaurant & Cafe,Others,False
+Tulip Hotel Apartments Deira,Excursion,False
+Four Seasons Hotel Ritz Lisbon,Others,False
+Amazon Tours,Excursion,False
+N.J.V. ATHENS PLAZA,Others,False
+Kempinski Al Othman Hotel,Others,False
+TRYP by Wyndham Dubai,Excursion,False
+Eurowings,Others,False
+Ayla Hotel,Excursion,False
+SKAF Hotel (EX Goldstate Hotel),Excursion,False
+Steigenberger Parkhotel Düsseldorf,Others,False
+Steigenberger Wiltcher's,Others,False
+Gran Hotel Guadalpin Banús Spain,Others,False
+SKY BONVOYAGE,Others,False
+Fairmont Le Montreux Palace,Others,False
+Royal Plaza Montreux & Spa,Others,False
+Pearl Creek Hotel,Excursion,False
+Clinique La Prairie,Others,False
+Mandarin Oriental Barcelona,Others,False
+Royal Tulip L.L.C ex Al Farej,Others,False
+Makkah Royal Clock Tower Hotel,Others,False
+Hotel Bayerischer hof Hotel,Others,False
+PARK INN BY RADISSON DAMMAM,Others,False
+HYATT PLACE AMSTERDAM AIRPORT,Others,False
+Crowne Plaza Zurich,Others,False
+Alila Jabal Akhdar,Others,False
+Rove Trade Centre,Excursion,False
+Buzz Global,Hotel Reservation,False
+Spark Residence Deluxe Hotel Apartments,Excursion,False
+Marhaba,Others,False
+Oaks Hotels & Resorts,Excursion,False
+HYATT REGENCY NICE PALAIS DE LA MEDITERRANEE,Others,False
+Al Hamra Residence and Village,Excursion,False
+Colombi Hotel – Colombi GmbH,Others,False
+Dream World Travels USA,Others,False
+Hermitage Monte Carlo,Others,False
+Hotusa - Restel,Hotel Reservation,False
+East Avenue Travel & Tourism,Others,False
+Bookohotel - XML,Hotel Reservation,False
+Golden Tulip Dar Es Salaam City Center Hotel,Others,False
+Aka Beverly Hills,Others,False
+Dar Al Tawhid Intercontinental Makkah,Others,False
+Beverly Wilshire A Four Seasons Hotel,Others,False
+VICTORIA-JUNGFRAU Grand Hotel & Spa,Others,False
+versatile tourism LLC,Others,False
+Travel Destination,Others,False
+Divani Caravel Hotel,Others,False
+Europa Park Hotels- Bell Rock,Others,False
+Rixos Premium Dubai,Excursion,False
+HPRO travel,Hotel Reservation,False
+Royal Adventure Travel and Tourism LLC,Others,False
+Golden Tulip Al Barsha Hotel,Excursion,False
+Hyatt Regency Amsterdam,Others,False
+Hilton cairo Zamalek residences,Others,False
+Hyatt Regency Los Angeles International Airport,Others,False
+Abercrombie & Kent Ltd,Excursion,False
+Vila Vita Parc resort Resort & Spa,Others,False
+Holiday Inn Algarve,Others,False
+Connection Chauffeur Limo L.L.C,Hotel Reservation,False
+Gran Melia Colon,Others,False
+Kingdom Travel Services,Others,False
+NH Dusseldorf City,Others,False
+ROLLA RESIDENCE HOTEL APARTMENTS,Excursion,False
+Grand Hyatt Istanbul Turkey,Others,False
+The Leela Ambience Gurgaon Hotel & Residences,Others,False
+Fairmont Heliopolis & Towers Cairo,Others,False
+Conrad Cairo Hotel,Others,False
+Metropolitan Palace Hotel,Excursion,False
+Peninsula Beverly Hills,Others,False
+ME Milan ll Duca,Others,False
+Adaaran Club Rannalhi,Excursion,False
+Hilton Garden Inn Glasgow City Centre,Others,False
+"Mandarin Oriental, Munich",Others,False
+Niu Barcelona Hotel,Others,False
+Raoum Inn Hotel Suites,Others,False
+The Ritz-Carlton Ras Al Khaimah Al Wadi Desert,Excursion,False
+The Ritz Carlton Ras Al Khaimah Al Hamra Beach,Excursion,False
+Media One Hotel,Excursion,False
+MENA Plaza Albarsha,Excursion,False
+Ramada Abu Dhabi Corniche,Excursion,False
+TRYP Hotel by Wyndham Abu Dhabi,Excursion,False
+RAMADA Abu Dhabi Downtown,Excursion,False
+Howard Johnson Abu Dhabi,Excursion,False
+HOWARD JOHNSON BUR DUBAI,Excursion,False
+The Eclipse Boutique Suites Abu Dhabi,Excursion,False
+Palm Tree Place,Excursion,False
+MERCURE GRAND HOTEL SEEF,Excursion,False
+Fortune Park Hotel,Excursion,False
+Bounty Tours,Others,False
+City Seasons Al Hamra Abu Dhabi,Excursion,False
+Optimum Car Rental,Others,False
+Jet2.com Limited,Air Ticket,False
+Leeds Bradford Airport,Others,False
+Aena Sala VIP,Others,False
+Hotel Habakuk,Others,False
+Grand Mercure Roxy Hotel,Excursion,False
+Travel Charme Fürstenhaus Am Achensee,Others,False
+Banhoek Lodge,Others,False
+Roda Beach Resort,Excursion,False
+VFS GLOBAL,Others,False
+Novotel Paris CDG Airport Roissy,Others,False
+"Shangri-La's Villingili Resort & Spa, Maldives.",Others,False
+Hilton Garden Inn Ras Al Khaimah,Excursion,False
+Meera Suites,Excursion,False
+Al Alwan Tours LLC,Others,False
+Dana Tours,Others,False
+Grand Hyatt Singapore,Others,False
+Jannah Hotel Apartments and Villas,Excursion,False
+LE Royal Express,Excursion,False
+Marriott Hotel & Marriott Executive Apartments Dow,Excursion,False
+Sheraton Dammam Hotel & Convention Centre,Others,False
+Town House Spagna,Others,False
+Four Seasons Hotel Beirut,Others,False
+"Centros Integración Juvenil, A.C",Others,False
+Corniche Hotel Abu Dhabi,Excursion,False
+Chiltern Firehouse,Others,False
+"Radisson Blu Hotel, East Midlands Airport",Excursion,False
+Rose Park Hotel - Al Barsha,Excursion,False
+Oryx Hotel,Excursion,False
+HILTON ZURICH AIRPORT,Excursion,False
+Hotel Sofitel Abu Dhabi Corniche,Excursion,False
+BAKU TOURS,Others,False
+Dover Downs Hotel & Casino,Others,False
+Delaware Express Inc.,Excursion,False
+SHERATON CASABLANCA HOTEL,Others,False
+Covent Garden Hotel,Excursion,False
+Paris Marriott Charles de Gaulle Airport Hotel,Others,False
+Holiday Inn Paris Charles de Gaulle,Others,False
+Bulgari Resort & Residences Dubai,Excursion,False
+Nika Island Resort & Spa,Others,False
+Golden Tower Hotel & Spa,Others,False
+Niranta Airport Transit Hoteland Lounge,Hotel Reservation,False
+NOVOTEL CAIRO AIRPORT,Others,False
+Four Seasons Hotel Cairo at Nile Plaza,Others,False
+Hôtel Le Palace d'Anfa Casablanca,Others,False
+The palm holidays LLC,Others,False
+Steigenberger ALDAU Resort,Others,False
+Emirates Airlines dubai,Air Ticket,False
+Mercure Singapore Bugis,Others,False
+LE MERIDIEN ETOILE,Others,False
+SUITES DE LA POTINIERE,Others,False
 H2H - Egypt Express Travel(JWS),Hotel Reservation,False
-HPRO travel,Hotel Reservation,True
-H2H - Travco v7,Hotel Reservation,True
+The Lanesborough london,Others,False
+Hotel 1898,Others,False
+Novotel Clarke Quay Singapore,Others,False
+clinical TMS Society Inc,Others,False
+I VIP Heathrow Airport,Hotel Reservation,False
+Hyatt Capital Gate Abu Dhabi,Excursion,False
+"Mandarin Oriental, Hong Kong",Others,False
+Rose Garden Bur Dubai,Excursion,False
+Park Inn by Radisson Muscat,Others,False
+Lordelgin hotel,Others,False
+"The Landmark, Mandarin Oriental",Others,False
+Holiday Inn Paris Gare de l'Est,Others,False
+Golden Tulip Al Barsha,Excursion,False
+Hotel Novotel Suites Paris Montreuil Vincennes,Others,False
+Imperial Palace,Others,False
+Al Rostamani Travel and Holidays,Excursion,False
+Rail Europe,Hotel Reservation,False
+Skye ViP Tours DMCC,Others,False
+Le Meridien Heliopolis,Others,False
+Six Senses Zighy Bay,Others,False
+Dubai International Hotel,Excursion,False
+Holiday Inn Express Zurich Airport,Others,False
+JA Palm Tree Court,Excursion,False
+JA Beach Hotel / EX: JA Jabel Ali Beach Hotel,Excursion,False
+Aloft Palm Jumeirah,Excursion,False
+Old Cataract Aswan,Others,False
+Zurich Hotel Istanbul,Others,False
+Makarem Riyadh Hotel,Others,False
+"Marsa Malaz Kempinski, The Pearl - Doha",Others,False
+Mövenpick Hotel Kuwait owned by ITHC,Others,False
+Hotel Imperial Vienna,Others,False
+NH Marbella,Others,False
+Crowne Plaza London  Battersea,Others,False
+Premier Inn Dubai Silicon Oasis Hotel,Excursion,False
+HILTON GARDEN INN ROME AIRPORT,Others,False
+Fakhruddin Hotel Apartment,Excursion,False
+Bay La Sun,Others,False
+Concierge Tour & Luxury Passengers Transport L.L.C,Hotel Reservation,False
+LE MERIDIEN  AL KHOBAR,Others,False
+les loges annecy Vieille Ville,Others,False
+LE MERIDIEN ST JULIANS HOTEL and SPA,Others,False
+WOODLANDS AND WOODLANDS LTD,Others,False
+ELITE STADSHOTELLET VÄXJÖ,Others,False
+American Society Of Addiction Medicine,Others,False
+Premier Inn Dubai Investment Park,Excursion,False
+Puenteromano Marbella Hotel,Others,False
+Stright line rent A Car LLC,Others,False
+Olivia Plaza Hotel,Others,False
+Visitaegean DMC Greece,Others,False
+Langham Hotel,Excursion,False
+The Grove Resort,Others,False
+Hotel Moroccan House Casablanca,Others,False
+Millennium Plaza Downtown Abu Dhabi,Excursion,False
+Tasneem Voyages,Others,False
+The Leela Reservations Worldwide,Others,False
+TotalStay,Others,False
+"The Pierre, A Taj Hotel, New York",Others,False
+Royal Club Coast Yachts Rental LLC,Hotel Reservation,False
+GEVORA HOTEL,Excursion,False
+Lamar Holidays LLC,Others,False
+Lamar Holidays,Others,False
+Sheraton Buenos Aires Hotel & Convention Center,Others,False
+Airport Hotel Basel AG,Others,False
+Al Bandar Rotana,Excursion,False
+METRO CENTRAL HOTEL APARTMENTS,Excursion,False
+AL BANDAR ARJAAN,Excursion,False
+"The Ritz-Carlton Beijing, Financial Street",Others,False
+Lufthansa German Airlines,Others,False
+H2H - RTS,Hotel Reservation,False
+Grand Hyatt Washington,Others,False
+Four Seasons Hotel London at Park Lane,Others,False
+Jumeirah Carlton Tower,Others,False
+Radisson Blu Hotel Dubai Waterfront,Excursion,False
+intercontinental Los Angeles century city Hotel,Others,False
+intercontinental Los Angeles century city,Others,False
+BB Test Hotel,Others,False
+"DORUS Hotel, Dubai",Excursion,False
+"Grand Millennium Al Wahda, Abu Dhabi",Excursion,False
+Hilton Los Angeles Airport,Others,False
+Avalon Chauffeured Services - Los Angeles,Others,False
+Grand Hyatt San Francisco,Others,False
+Houston Airport Marriott at George Bush Interconti,Others,False
+Sofitel Paris Le Faubourg Hotel,Others,False
+Sofitel Paris Le Faubourg,Others,False
+Cafisa Rent A car,Hotel Reservation,False
+Mandarin Oriental Hong Kong,Others,False
+BAUR AU LAC,Others,False
+VIP Platinum Concierge,Others,False
+HYATT PLACE DUBAI/AL RIGGA,Excursion,False
+H2H - Travco v7,Hotel Reservation,False
+"Zabeel House MINI by Jumeirah, Al Seef",Excursion,False
+Holiday Inn Dubai Festival City,Excursion,False
+Capital Centre Arjaan by Rotana,Excursion,False
+The ACT Hotel,Excursion,False
+Victoria Crown Plaza Hotel,Excursion,False
+Premier Inn Abu Dhabi Capital Centre,Excursion,False
+THE PARK TOWER KNIGHTSBRIDGE,Others,False
+Armani Hotel Milano,Others,False
+Hilton Jeddah,Others,False
+RODA LINKS AL NASR,Others,False
+72 Hotel,Excursion,False
+Le Meurice Paris,Others,False
+Wyndham Garden Ajman Corniche,Excursion,False
+Emerald Hotel,Others,False
+Altitude Courchevel Chalets,Others,False
+Hotel Principi di Piemonte Hotel,Others,False
+Crystal Cruises,Others,False
+Hotel Principi di Piemonte,Others,False
+Mandarin Oriental Hyde Park London,Others,False
+city stay beach hotel apartment,Excursion,False
+World Link Travels,Others,False
+Hotel Plaza Athénée,Others,False
+The St Regis Downtown Dubai  Ex Renaissance,Excursion,False
+Pearl Rotana Capital Centre,Excursion,False
+H2H - Traveltino,Hotel Reservation,False
+Palazzo Parigi hotel &Grand Spa,Others,False
+Hotel de la Croisette,Others,False
+BEAU-RIVAGE PALACE,Others,False
+Swissport International Ltd,Others,False
+NOVOTEL RIYADH AL ANOUD,Others,False
+LE MERIDIEN CAIRO AIRPORT,Others,False
+Hotwheels Luxury Transport L.L.C.,Hotel Reservation,False
+New Black Stone Hotel,Others,False
+Flora Inn Hotel DXB,Excursion,False
+Flora Inn Hotel,Excursion,False
+Hotel Bayerischer HOF,Others,False
+Hotel Metropole Venice,Others,False
+Hampton by Hilton Dubai Airport,Excursion,False
+Shangri-La Barr Al Jissah Resort & Spa,Others,False
+REETHI Faru Resort,Others,False
+The Savoy,Others,False
+PALM BEACH HOTEL,Excursion,False
+JTB corp,Others,False
+Mandarin Oriental Tokyo,Others,False
+Abou Samra Travel,Others,False
+The Abu Dhabi EDITION,Excursion,False
+Erth Abu Dhabi ex armed forces,Excursion,False
+THE WESTIN GRAND FRANKFURT,Others,False
+Grand Hotel Via Veneto,Others,False
+NIHAL RESIDENCY HOTEL APARTMENT,Excursion,False
+Paradise Travel,Others,False
+Royal Beach Hotel & Resort,Excursion,False
+Mövenpick Hotel Bahrain,Others,False
+The Kensington Hotel,Others,False
+Royal Central Hotel - The Palm Hotel,Excursion,False
+Royal Central Hotel - The Palm,Excursion,False
+Omega Hotel,Others,False
+Radisson Blu Hotel Basel,Excursion,False
+IMPÉRIAL PALACE Annecy,Others,False
+CALLUM SWAN REALTY,Others,False
+Wood Properties SL,Others,False
+Queen Elizabeth 2 Hotel,Excursion,False
+Aloft Hotel Al Ain,Excursion,False
+I’way,Hotel Reservation,False
+Portimar,Others,False
+The May Fair,Others,False
+HOTEL MERCURE WARSZAWA CENTRUM,Others,False
+LAtelier Du Voyage (Group Satguru Travel),Others,False
+Novotel Ambassador Seoul Doksan,Others,False
+Tamarind Global,Others,False
+Rayna Tourism LLC,Others,False
+Djibouti Palace Kempinski,Others,False
+Cruise Master LLC,Hotel Reservation,False
+The Ritz Carlton Kyoto,Others,False
+Billionaires Row International,Others,False
+Arena City Hotel Salzburg by Centro,Others,False
+Grand Millennium Business Bay,Excursion,False
+Pentahotel Reading,Others,False
+VALLEY OF TOURISM Georgia,Others,False
+"The Ritz-Carlton, Bahrain",Others,False
+Hotel am Schubertring,Others,False
+Kempinski Hotel Corvinus Budapest,Others,False
+"Rome Cavalieri, A Waldorf Astoria Resort ",Others,False
+Sixt Rent a Car S.L. Unipersonal,Others,False
+Newcastle Park and Fly,Others,False
+Jen Hotel Maldives,Others,False
+Radisson Blu Sobieski Warsaw,Others,False
+Radisson Blu Hotel Jeddah,Others,False
+ST REGIS MALDIVES VOMMULI RESORT,Others,False
+Arena Pvt Ltd,Others,False
+Arena Beach Hotel,Excursion,False
+Hotel Astoria,Others,False
+"ANANTARA HOTELS, RESORTS & SPAS MALDIVES",Excursion,False
+Eurostars Bcn Design,Others,False
+COSMOHOTEL TORRI,Others,False
+Grand Hotel Quisisana,Others,False
+H2H - LCI (JWS),Hotel Reservation,False
+Four Seasons Hotel Amman,Others,False
+NOVOTEL Dammam Business Park,Others,False
+"Al Areen Palace & Spa, Kingdom of Bahrain",Others,False
+British Ariways,Air Ticket,False
+The Gabriel Hotel,Others,False
+Hilton Athens,Others,False
+Sheraton Carlton Nuernberg,Others,False
+Hotel Eden Palace Au Lac,Others,False
+Bupa Cromwell Hospital,Others,False
+Maison Bréguet,Others,False
+Rove Marina Dubai,Excursion,False
+Hôtel La Maison Champs Elysées,Others,False
+URO DIFFUSION SAS,Others,False
+Movenpick Hotel Apartments Downtown Dubai,Excursion,False
+"Mandarin Oriental Jumeira, Dubai",Excursion,False
+H2H - Agoda,Hotel Reservation,False
+Sheraton Warsaw Hotel,Others,False
+HOTEL GRANDE BRETAGNE,Others,False
+Radisson Hotel Cleveland Airport West,Others,False
+NOVOTEL WARSZAWA CENTRUM,Others,False
+Four Seasons Hotel Kuwait at Burj Alshaya,Others,False
+Fairmont Rey Juan Carlos Business & City Resort,Others,False
+InterContinental Warszawa,Others,False
+"AZD Hotel, Abha Saudi Arabia",Others,False
+"Kempinski Hotel Muscat, Sultanate of Oman",Others,False
+J5 Rimal Hotel Apartments,Excursion,False
+Europa Group,Hotel Reservation,False
+Bariatric & Minimally Invasive Surgery Program,Others,False
+"Al Seef Heritage Hotel Dubai, Curio Collection by",Excursion,False
+Meliá Hotels International,Others,False
+Tays4travel,Others,False
+Better Homes & Gardens,Others,False
+CAESARS RESORT BLUEWATERS DUBAI,Excursion,False
+BANYAN TREE DUBAI,Excursion,False
+THE RESIDENCES AT CAESARS PALACE BLUEWATERS Dubai,Excursion,False
+Millennium Hotel Hail,Others,False
+Millennium Resort Salalah,Others,False
+Emerald Palace Kempinski Dubai,Excursion,False
+HOLIDAY INN PARIS - PORTE DE CLICHY,Others,False
+The Crest Collection,Others,False
+THE WESTIN MALDIVES MIRIANDHOO RESORT,Others,False
+Saadiyat Rotana Resort & Villas,Excursion,False
+TIVOLI HOTELS & RESORTS,Excursion,False
+JW Marriott Grosvenor House London,Others,False
+Telal Hotel Apartments,Excursion,False
+J5 Hotels Port Saeed,Excursion,False
+Abd El Wahab Restaurant,Hotel Reservation,False
+"Mandarin Oriental, Kuala Lumpur",Others,False
+INTERCONTINENTAL ISTANBUL,Others,False
+Gulf Court Hotel Business Bay,Excursion,False
+Four Seasons Hotel des Bergues,Others,False
+Millennium Executive Apartments Muscat,Others,False
+Grand Millennium Muscat,Others,False
+"Luton Hoo Hotel, Golf & Spa",Excursion,False
+The Fontenay Hamburg Hotel,Others,False
+The Fontenay Hamburg,Others,False
+Hotel Scribe Paris,Others,False
+Makkah Millennium Hotel,Others,False
+Makkah Millennium Towers,Others,False
+NH MILANO FIERA,Others,False
+WALDORF ASTORIA BEVERLY HILLS,Others,False
+Beach Rotana Residence Abu Dhabi,Excursion,False
+SOCIETE FRANCAISE RHUMATOLOGIE,Others,False
+HÔTEL WESTMINSTER,Others,False
+Roland House Apartments London,Others,False
+Hilton Garden Inn Central Park South,Excursion,False
+Amman Rotana,Others,False
+"The Ritz-Carlton Hotel de la Paix, Geneva.",Others,False
+Leva Hotel Apartments – Mazaya Center,Excursion,False
+Travoreise,Others,False
+Kiwi.com s.r.o.,Others,False
+A Fairmont Hotel,Excursion,False
+InterContinental Jeddah,Others,False
+Wyndham houston Medical Center Hotel And Suites,Excursion,False
+ALTA Travel  ( Al Ghaith & Al Moosa Travel Agency,Others,False
+Dar Al Eiman Royal,Others,False
+Dar Al Eiman Grand,Others,False
+Within Earth,Hotel Reservation,False
+The Strings By InterContinental Tokyo,Others,False
+Four Seasons Hotel Kuala Lumpur,Others,False
+Studio M Arabian Plaza Hotel & Hotel Apartments,Excursion,False
+SANA Rent A Car,Hotel Reservation,False
+Eagle line,Others,False
+InterContinental Berlin,Others,False
+DiamondAir International,Others,False
+InterContinental Geneve,Others,False
+Lagoona Beach Luxury Resort,Others,False
+InterContinental London Park Lane,Others,False
+Biotonus Clinique Bon Port,Others,False
+Raffles Jakarta,Others,False
+Hilton Alexandria Corniche,Others,False
+"Zabeel House by Jumeirah, The Greens",Excursion,False
+Jumeirah Al Wathba Desert Resort & Spa,Excursion,False
+Raouché Arjaan by Rotana - Beirut,Others,False
+Hilton Garden Inn Milan North,Others,False
+"Radisson Blu Portman Hotel, London",Others,False
+Nice Trip Holidays,Others,False
+InterContinental Hotels MADINAH-DAR AL IMAN,Others,False
+Adaaran Prestige Vadoo,Others,False
+"Sama-Sama Hotel,KL International Airport",Others,False
+Mercure Paris 17 Batignolles,Others,False
+GriwaRent AG Ferienwohnungen & Chalets,Others,False
+Crowne Plaza Beirut,Others,False
+Desert Rose Hotel Apartments,Excursion,False
+Royal M Hotels & Resorts,Excursion,False
+Millennium Resort Mussanah,Others,False
+W Dubai - The Palm,Excursion,False
+Hotel Sofitel Bahrain Zallaq Thalassa Sea & Spa,Others,False
+FORM Hotel Dubai,Excursion,False
+Mama Shelter Lyon,Others,False
+Four Points By Sheraton Production City.,Excursion,False
+Tulip Hotel Apartments,Excursion,False
+San Clemente Palace Kempinski Venice,Others,False
+Nell Gwynn House Apartments hotel,Others,False
+Nell Gwynn House Apartments,Others,False
+"PC STAR XPRESS Co.,Ltd.",Others,False
+LE MERIDIEN MUNICH,Others,False
+North Avenue Hotel,Excursion,False
+Hotel Ibis Abu Dhabi Gate,Excursion,False
+The S Hotel Al Barsha,Excursion,False
+Chelsea Green Apartments,Excursion,False
+Hilton Frankfurt Airport,Others,False
+Al Khoory Inn Bur Dubai,Excursion,False
+H2H - Miki,Hotel Reservation,False
+Hôtel Napoléon,Others,False
+Kay invest,Others,False
+Das Nikolai Hotel,Others,False
+Virgin Atlantic Airways Ltd,Air Ticket,False
+The Mark Restaurant by Jean-Georges,Others,False
+AETAS residence,Excursion,False
+Hôtel d'Orsay,Others,False
+Hyatt Place Riyadh Al Sulaimania,Others,False
+Xclusive Maples Hotel Apartment,Others,False
+Xclusive Casa Hotel Apartment,Excursion,False
+Xclusive Hotel Aprartment,Excursion,False
+New York Marriott Marquis,Others,False
+Barceló Dubai Marina Residences,Excursion,False
+Al Sur Security and Risk Management,Others,False
+Four Points by Sheraton Sharjah,Excursion,False
+Alam Car,Hotel Reservation,False
+Park Hotel Donauwörth,Others,False
+Mangrove Hotel,Excursion,False
+Bonne Sante Hotel Istanbul,Others,False
+Hyatt Place Dubai Baniyas Square,Excursion,False
+"Grand Park Kodhipparu, Maldives",Others,False
+Berjaya Langkawi Resort,Others,False
+Holiday Inn London – Stratford City,Others,False
+Malmaison Hotels UK,Others,False
+"Shangri-La Hotel, Tokyo",Others,False
+Doubletree By Hilton Dubai Al Jadaf.,Excursion,False
+Millennium Atria Business Bay,Excursion,False
+Principe di Savoia,Others,False
+Fez travel,Others,False
+Ritz Paris Hotel,Others,False
+Ritz Paris,Others,False
+Hôtel Astoria Geneva,Others,False
+Queen Centre Rotana Suites Hotel Damascus,Others,False
+Cham Palace hotel Damascus,Others,False
+Blue Tower Hotel Damascus,Others,False
+Kaisar Palace Hotel Damascus,Others,False
+Fardoss Tower Hotel Damascus,Others,False
+H2H - Holiday Taxis,Hotel Reservation,False
+Park Hyatt Milano,Others,False
+Hôtel Barrière Le Gray d'Albion,Others,False
+Westside Arc de Triomphe Hotel,Others,False
+Grange Hotels,Others,False
+Capri Tiberio Palace,Others,False
+Four Seasons Riyadh at Kingdom Centre,Others,False
+Köln Marriott Hotel,Others,False
+Hotel Barriere Le Fouquets Paris,Others,False
+Cologne Marriott Hotel,Others,False
+The Roosevelt New Orleans,Others,False
+H2H - ExpediaRapid,Hotel Reservation,False
+Alsafwah Hotel,Excursion,False
+Grand Nile Tower Hotel,Others,False
+Hotel Sofitel Cairo Nile El Gezirah,Others,False
+InterContinental Cairo Semiramis,Others,False
+Ramses Hilton,Others,False
+"Fairmont Nile City Hotel, Cairo ",Others,False
+Holiday Inn Cairo - Citystars,Others,False
+Hilton Cairo Heliopolis,Others,False
+Heliopolis Towers Hotel,Excursion,False
+Kempinski Nile Hotel Garden City Cairo,Others,False
+Steigenberger Hotel El Tahrir Cairo,Others,False
+Four Seasons Hotel Cairo at The First Residence,Others,False
+Dusit Thani LakeView Cairo,Others,False
+Pyramisa Cairo Suites & Casino,Others,False
+Hilton Cairo World Trade Center Residence,Others,False
+Sonesta Tower & Casino Cairo Hotel,Others,False
+Staybridge Suites Cairo - Citystar,Others,False
+Barceló Cairo Pyramids,Others,False
+"The Nile Ritz-Carlton, Cairo ",Others,False
+Four Points by Sheraton Munich Central,Others,False
+Crowne Plaza riyadh KSA,Others,False
+Extranet Supplier Touring Club Of Egypt,Hotel Reservation,False
+Braira Dammam Hotel,Others,False
+nayaab haandi Restaurant,Others,False
+Accra Marriott Hotel,Excursion,False
+Mercure hotel Khamis Mushayt,Others,False
+RYANAIR DAC,Air Ticket,False
+NOVOTEL Bahrain Al Dana Resort,Others,False
+COMO Hotels and Resorts,Others,False
+" St. James' Court, A Taj Hotel",Others,False
+Millennium Hotels and resorts,Excursion,False
+Hotel la Pomme de Pin,Others,False
+Cheval Blanc Courchevel,Others,False
+Lindner Grand Hotel Beau Rivage,Others,False
+Annia Park Hotel Venice Airport,Others,False
+Hôtel Barrière Le Majestic,Others,False
+Leonardo Hotel Hannover,Others,False
+Four Points by Sheraton Kuwait,Others,False
+Pearl Park Deluxe Hotel Apartment,Excursion,False
+Rose Garden Hotel Apartment - Bur Dubai,Excursion,False
+CTS Travel & Tourism,Others,False
+Chelsea Plaza Hotel Dubai,Excursion,False
+Hard Rock Hotel London,Others,False
+ Sofitel Al Khobar the Corniche,Others,False
+Hyatt Place Dubai/Wasl District,Excursion,False
+Jumeirah Royal Saray Bahrain,Others,False
+The Landmark London,Others,False
+Al Safir Hotel & Tower,Excursion,False
+Palace Hotel Zingonia,Others,False
+art'otel amsterdam,Others,False
+Hyde Park Executive Apartments,Excursion,False
+Four Seasons Hotel San Francisco,Others,False
+Medi Travel,Others,False
+Amba Hotel Marble Arch,Others,False
+Great cumberland place,Others,False
+Jurys Inn London Holborn,Others,False
+Sharjah Premiere Hotel & Resort,Excursion,False
+Aspin Holding,Hotel Reservation,False
+Address Sky Views,Excursion,False
+Address Dubai mall ex Address Fountain Views,Excursion,False
+NOVOTEL CAIRO 6TH OF OCTOBER,Others,False
+Queens Park Hotel,Excursion,False
+Bayswater Inn Hotel,Excursion,False
+Royal M Hotel Abu Dhabi,Excursion,False
+Traveldoor georgia,Others,False
+Inter Hotel Tirol,Others,False
+Boutiquehotel Albergo Brione,Others,False
+Crowne Plaza Geneva,Others,False
+Huvafen Fushi Maldives,Others,False
+Danat Al Ain Resort,Excursion,False
+Grand Mercure Jakarta Harmoni,Others,False
+Interalpen-Hotel Tyrol,Others,False
+"Radisson Blu Hotel & Residence, Maputo",Others,False
+H2H - AIC,Hotel Reservation,False
+Kempinski Hotel Bahía,Others,False
+Julia Travel,Others,False
+Four Seasons Travel,Others,False
+Global Jet Centre,Others,False
+Millennium Place Marina,Excursion,False
+Marriott International Paris,Excursion,False
+"Centro Waha,Riyadh",Others,False
+The Venetian Resort Las vegas,Others,False
+Hotel Raffles Makkah Palace,Others,False
+Sofitel Queenstown Hotel & Spa,Others,False
+Meltemi Hotels & Resorts,Excursion,False
+Al Bahar Hotel & Resort,Excursion,False
+Vida Emirates Hills,Excursion,False
+Vida Harbour Point,Excursion,False
+Rixos Sharm El Sheikh,Others,False
+H2H - GoGlobal,Hotel Reservation,False
+Royal Island Resort & Spa,Others,False
+"V Villas Hua Hin, MGallery Hotel Collection",Others,False
+Banyan Tree Seychelles,Others,False
+Red Lion Hotel Anaheim Resort,Others,False
+Paramount Hotel Dubai,Excursion,False
+HILTON MUNICH PARK,Others,False
+Monument Hotel Barcelona,Others,False
+Gran Hotel Guadalpin Banus,Others,False
+Le Grand Hotel Cannes,Others,False
+Chelsea Coisters,Others,False
+Excelsior Hotel Downtown,Excursion,False
+De L'europe Amsterdam,Others,False
+Still Life Global Ltd,Others,False
+I way,Hotel Reservation,False
+Anantara Layan Phuket Resort,Others,False
+The Hotel du Collectionneur Arc de Triomphe Paris,Others,False
+Atlas Asni,Excursion,False
+Royal M Hotel & Resort Abu Dhabi,Excursion,False
+Four Seasons Hotel Seoul,Others,False
+Dubai Oasis Palm,Excursion,False
+Rove At The Park,Others,False
+Millennium Al Barsha,Excursion,False
+" Four Seasons Hotel Baku, Azerbaijan",Others,False
+Fairmont Hotel Vier Jahreszeiten,Others,False
+Sheraton Maldives Full Moon Resort & Spa,Others,False
+Narcissus Resort & Spa Obhur Jeddah,Others,False
+GRAND HOTEL ZELL AM SEE,Others,False
+"Park Inn by Radisson Yas Island, Abu Dhabi",Excursion,False
+TES Tour LLC,Others,False
+JA Lake View HOtel,Excursion,False
+Warwick Paris,Others,False
+Shangri-La Al Husn Resort and Spa,Others,False
+AL Murooj Grand Muscat,Others,False
+BERTEL TRAVEL TOUR OPERATOR,Others,False
+Vakkaru Maldives,Others,False
+The House Boutique Suite,Others,False
+RIMBA Jimbaran BALI by AYANA,Others,False
+Four Seasons Hotel George V,Others,False
+VIENNA SIGHTSEEING TOURS,Others,False
+W HOTELS WORLDWIDE,Others,False
+Hotel Cala Cuncheddi,Others,False
+Rove Jeddah,Others,False
+The St. Regis Rome,Others,False
+Bvlgari Hotel London,Others,False
+"Hotel Don Pepe, a Gran Meliá Hotel             ",Others,False
+Hotel Occidental Praha Wilson,Others,False
+Occidental Praha,Excursion,False
+Occidental Praha Five Hotel,Excursion,False
+Oceans Edge Resort,Excursion,False
+Vista Lago Di Como,Others,False
+KURUMBA Maldives,Others,False
+Paris City Vision,Others,False
+Machefert Group,Others,False
+MAISON 140 & MOSAIC HOTEL,Others,False
+"Riley, a Crystalbrook Collection Resort",Others,False
+BLS International,Others,False
+Meliá Villa Capri Hotel & Spa,Others,False
+Nubia Aqua Beach Resort,Others,False
+Grand Hyatt San Antonio,Others,False
+ Hotel Mirabell München,Others,False
+Four Points by Sheraton  Bolzano Bozen,Others,False
+Regency Plaza Aqua Park And Spa Resort,Excursion,False
+Tylney Hall Hotel and Gardens,Others,False
+SO/ Vienna,Others,False
+Leisure Destinations Maldives,Others,False
+Hôtel De Sers Champs Elysées Paris,Others,False
+Gerry’s Destination Management Company UK Ltd.,Others,False
+CLARION HOTEL ISTANBUL MAHMUTBEY,Others,False
+Novotel Monte Carlo,Others,False
+HYATT REGENCY WASHINGTON ON CAPITOL HILL,Others,False
+St. James's Hotel And Club,Others,False
+Class Hotel Apartments,Excursion,False
+Fairmont Rey Juan Carlos I - Barcelona,Others,False
+Fanadir & Mosaique Hotels - El Gouna,Others,False
+EXE LAIETANA PALACE,Others,False
+El Mouradi Palace,Others,False
+Gulf Dunes LLC,Others,False
+MOHD & OBAID AL MULLA L.L.C.,Others,False
+Radisson Blu Resort Fujairah,Excursion,False
+Hilton Dubai THE Walk Hotel,Excursion,False
+Parco dei Principi Grand Hotel & Spa,Others,False
+Hôtel du Midi,Others,False
+IH Hotels Milano Gioia,Others,False
+EXECUTIVES HOTEL,Excursion,False
+Hilton Barcelona,Others,False
+Medina Belisaire & Thalasso,Others,False
+Hotel Mela time Square,Others,False
+Grand Plaza Mövenpick Media City,Excursion,False
+Queen's Drive Aparthotel,Others,False
+The Lowry Hotel Manchester London,Others,False
+St Martins Lane Hotel,Excursion,False
+Sanderson Hotel,Others,False
+Hôtel Les Trésoms,Others,False
+Novotel Bur Dubai Hotel Healthcare City,Excursion,False
+HF Ipanema Porto,Others,False
+HF Ipanema Park,Others,False
+Andaz Capital Gate Abu Dhabi,Excursion,False
+Andaz Dubai The Palm,Excursion,False
+FIVE Jumeirah Village Hotel,Excursion,False
+Ayla Grand Hotel,Excursion,False
+Hilton London Olympia,Others,False
+Hôtel Le Richemond,Others,False
+Staybridge Suites Beirut Hotel,Others,False
+Staybridge Suites Beirut,Others,False
+"The Ritz-Carlton, Jeddah",Others,False
+Shanti Maurice Resort & Spa,Excursion,False
+Four Seasons Hotel Tunis,Others,False
+Luxe Voyage DMC,Others,False
+Ramada Plaza by Wyndham Dubai Deira,Excursion,False
+Delmon Boutique Hotel,Excursion,False
+Dubai Quality Group,Others,False
+Coral Al Ahsa Hotel,Others,False
+H2H - WithinEarth,Hotel Reservation,False
+Baron Palms Sharm El Sheikh,Others,False
+Korston Club,Others,False
+Korston Club Hotel,Others,False
+Petit Palace Cliper Gran Vía,Others,False
+AMAN,Excursion,False
+H2H - SunHotels,Hotel Reservation,False
+Luxe asia Travel,Others,False
+The Biltmore Mayfair Hotel,Excursion,False
+Richmond Hill Hotel,Excursion,False
+Le Cinq Codet Paris,Others,False
+Crowne Plaza - Riyadh RDC Hotel & Convention Cente,Others,False
+Karam Beirut Dubai Mall,Others,False
+Awtar Restaurant-  Grand Hyatt Dubai,Others,False
+Feast Restaurant- Sheraton Grand Hotel,Others,False
+Asian Trails Ltd.,Others,False
+Trianon Royal Hotel,Excursion,False
+Musandam Adventure Travel & Tourism,Others,False
+Hotel Saint Germain Paris,Others,False
+HOTEL METROPOLE Monte-Carlo,Others,False
+Taj 51 Buckingham Gate,Excursion,False
+Hilton Seychelles Labriz Resort & Spa,Others,False
+EXceL events FZ LLC,Others,False
+Best Western Plus,Others,False
+Alqasr Metropole Hotel,Excursion,False
+Disney world,Hotel Reservation,False
+Fairmont Riyadh,Others,False
+Dorsett Singapore,Others,False
+Rehman Travel,Others,False
+Swissotel AL Maqam,Others,False
+Swissotel Makkah,Others,False
+Canareef Resort Maldives,Others,False
+NH PALAZZO MOSCOVA,Others,False
+Jumeirah at Saadiyat Island Resort,Excursion,False
+"100 Queen's Gate Hotel London, Curio Collection by",Others,False
+H2H - HotelDoMexico,Hotel Reservation,False
+Pezula Resort Hotel & Spa,Others,False
+Baglioni Hotel Carlton,Others,False
+Waldorf Astoria Dubai International Financial Cent,Excursion,False
+Grand Plaza Gulf Hotel,Excursion,False
+Grand Hyatt Abu Dhabi Hotel & Residences Emirates,Excursion,False
+The Shelbourne,Others,False
+Millennium Place Barsha Heights Hotel,Excursion,False
+Millennium Place Barsha Heights Hotel Apartments,Excursion,False
+Gorski Hotel & Spa,Others,False
+Greenora Travel,Others,False
+Novel Hotel City Center,Excursion,False
+Congo Palace Hotel,Others,False
+Peace Land Travel & Tourism L.L.C,Others,False
+Parisi Udvar Hotel Budapest,Others,False
+Sail of light trading,Others,False
+W Muscat,Others,False
+Golden Tulip Media Hotel,Excursion,False
+Online Airport Cars Ltd,Others,False
+"Hotel Amigo, a Rocco Forte Hotel",Others,False
+DAA PLC  (Platinum services at Dublin Airport),Others,False
+YOKOHAMA ROYAL PARK HOTEL,Others,False
+Guildford Harbour Hotel,Others,False
+Le Meridien Fairway,Others,False
+Parkhotel Obertshausen,Others,False
+Park Hotel Bremen,Others,False
+Najd Rent A Car Co LLC,Others,False
+Premier Inn Ibn Battuta Hotel,Excursion,False
+Hotel Borges Chiado,Others,False
+H2H - Adonis,Hotel Reservation,False
+Cafe Royal London,Others,False
+The Stay Nisantasi,Others,False
+Nobu Hotel Barcelona,Others,False
+Hilton Park Lane London,Others,False
 H2H - Youtravel,Hotel Reservation,False
-Address Beach Resort DY,Hotel Reservation,False
-Bulgari Resort & Residences Dubai,Hotel Reservation,False
-Four Points by Sheraton Sharjah,Hotel Reservation,False
-Khalidiya Palace Rayhaan by Rotana,Hotel Reservation,False
-Radisson Blu Resort Fujairah,Hotel Reservation,False
-Within Earth,Hotel Reservation,True
-Hilton Garden Inn Ras Al Khaimah,Hotel Reservation,False
+Dubai Insurance company ISA,Hotel Reservation,False
+The Ritz London,Others,False
+Vienna Aircraft Handling GmbH,Others,False
+Holiday Inn Riyadh Meydan,Others,False
+LE TRANSPORTEUR,Others,False
+ORLANDO LUXURY TRANSPORTATION LIMOUSINE & CAR SERV,Others,False
+City Seasons Hotel  Muscat,Hotel Reservation,False
+"Radisson Blu Edwardian, Berkshire",Others,False
+"Radisson Blu Edwardian, Heathrow",Others,False
+"Radisson Blu Edwardian, Grafton",Others,False
+"Radisson Blu Edwardian, Hampshire",Others,False
+"Radisson Blu Edwardian, Kenilworth",Others,False
+"Radisson Blu Edwardian, Mercer Street",Others,False
+"Radisson Blu Edwardian, Sussex",Others,False
+"Radisson Blu Edwardian, Vanderbilt",Others,False
+"The May Fair, A Radisson Collection ",Others,False
+"Radisson Blu Edwardian, New Providence Wharf",Others,False
+"The Edwardian Manchester, A Radisson Collection ",Others,False
+Le Belmont Hotel,Others,False
+"Radisson Blu Edwardian, Bloomsbury",Others,False
+Hotel Brienzersee,Others,False
+Mozart Limousines & Security GmbH,Others,False
+Disney VIP Tour Services,Hotel Reservation,False
+HOTEL EL AURASSI ALGIERS Hotel,Others,False
+HOTEL EL AURASSI ALGIERS,Others,False
+Vienna Limousine,Hotel Reservation,False
+Grand Hyatt Kuala Lumpur,Others,False
+Golden Tulip Qasr Al Nasiriah Riyadh,Others,False
+Millennium Central Mafraq Hotel,Excursion,False
+Buddha-Bar Hotel Paris,Others,False
+NOVOTEL Sharjah Expo Centre,Excursion,False
+HOTELCARLOSIll,Others,False
+Paris Marriott Rive Gauche Hotel & Conference Cent,Others,False
+Emirates Transport,Hotel Reservation,False
+AROOHA TOURS,Others,False
+Siam Kempinski Hotel Bangkok,Others,False
+"The Ritz-Carlton, Vienna",Others,False
+NH Vienna Airport,Others,False
+Village Hotel Club Cardiff,Others,False
+Al Alamein Hotel.,Excursion,False
+HOTEL PRESIDENT WILSON,Others,False
+Puente Romano Marbella,Others,False
+Travelers Street,Others,False
+Hyatt Centric Gran Vía Madrid,Others,False
+TIME Dunes Hotel Apartments Al Barsha,Excursion,False
+Guarantee Travel Group,Others,False
+Prime Jet Services FZE,Air Ticket,False
+"Radisson Blu Hotel, Riyadh",Others,False
+La Cigale Hotel,Others,False
+H2H - MyGo,Hotel Reservation,False
+Crown Palace Hotel Ajman,Excursion,False
+Mirfa Hotel Abu Dhabi,Excursion,False
+MARADIVA VILLAS RESORT & SPA,Others,False
+Amba Hotel Grosvenor,Others,False
+Fairmont Hotel Vier Jahreszeiten Hamburg,Others,False
+Taj Jumeirah Lakes Towers,Excursion,False
+OYO 297 California Hotel,Hotel Reservation,False
+OYO 101 Click Hotel,Hotel Reservation,False
+OYO 122 Crystal Plaza Hotel,Hotel Reservation,False
+OYO 367 Eureka Hotel,Hotel Reservation,False
+Capital O 246 Landmark Summit Hotel,Others,False
+OYO 109 Smana Hotel Al Raffa,Hotel Reservation,False
+OYO 482 Sun and Sand Downtown Hotel,Hotel Reservation,False
+Capital O 325 Queen Palace Hotel,Others,False
+OYO 366 Waves Hotel,Hotel Reservation,False
+Premier Hotels & Resorts,Excursion,False
+Emirates Plaza Hotel,Excursion,False
+Grand Hotel Wien DY,Hotel Reservation,False
+TIME Express Hotel Al Khan,Excursion,False
+The Guardsman,Others,False
+Air blue,Air Ticket,False
+Jumeirah Port Soller Hotel & Spa DXB,Others,False
+Jumeirah Port Soller Hotel & Spa,Others,False
+NH Collection Eurobuilding,Others,False
+NH Collection Gran Hotel Calderon,Others,False
+L'Arabia Hotel Apartments,Others,False
+KayHomes Luxury Villas,Others,False
+Hotel Rixos Saadiyat Island Abu Dhabi,Excursion,False
 H2H - DhiscoSabre,Hotel Reservation,False
-Fairmont Ajman,Hotel Reservation,False
-Out Bound Supplier,Other,False
-Visa Account,Visa,False
-Aspin Holding,Visa,False
+Stella Di Mare Dubai Marina,Excursion,False
+THE PALMS BEACH HOTEL & SPA,Excursion,False
+Tune Protect,Hotel Reservation,False
+Luxury Travel,Others,False
+Swissôtel Al Murooj Dubai,Excursion,False
+Al Gosaibi Hotel,Excursion,False
+Four Seasons Maldives At Kuda Huraa,Others,False
+NH Collection Madrid Gran Vía,Others,False
+Al Salam Grand Resort,Excursion,False
+"Nofa Resort Riyadh, A Radisson Collection Hotel",Others,False
+Tilal Liwa hotel,Excursion,False
+VELVET,Others,False
+Burj Rafal Riyadh A Marriott hotel,Others,False
+AL KHATEEB BROTHERS TRADING (L.L.C.),Others,False
+Rove La Mer Beach DY,Hotel Reservation,False
+Occidental Sharjah Grand,Excursion,False
+Ghassan Aboud Group,Others,False
+Hotel Indigo Dubai Downtown,Excursion,False
+Millennium Executive Apartments Montrose,Others,False
+City Avenue Hotel,Excursion,False
+Hyatt Regency London - The Churchill,Others,False
+Hampton By Hilton Albarsha,Excursion,False
+Edge Creekside Hotel DY,Hotel Reservation,False
+Swissôtel Al Murooj Dubai DY,Hotel Reservation,False
+Roda Al Murooj Suites & Apartments DY,Hotel Reservation,False
+Movenpick Grand Al Bustan Dubai,Excursion,False
+AL RAYA HOTEL APARTMENTS L.L.C,Excursion,False
+H2H - Dhisco Kempinski,Hotel Reservation,False
+Marriott Hotel Al Forsan Abu Dhabi,Excursion,False
+C Central Resort The Palm,Excursion,False
+Shams Free Zone,Others,False
+Alahlih International Buses service LLC,Hotel Reservation,False
+Emirates Airlines (Visa Section),Hotel Reservation,False
+Urban Al Khoory Hotel,Excursion,False
+THE LEELA HOTEL DUBAI,Excursion,False
+Hilton Garden Inn Dubai Al Jadaf Culture Village,Excursion,False
+Rove La Mer Beach,Excursion,False
+Extranet Supplier FARHAT TOURS,Hotel Reservation,False
+Dadabhai Travel,Others,False
+Golden Sands 5 Hotel Apartments,Excursion,False
+Hampton by Hilton Dubai Al Seef,Excursion,False
+DhiscoMillennium,Excursion,False
+JA Hatta Fort Hotel L.L.C,Excursion,False
+Atlanta Tourism and Travel,Others,False
+atlanta Tourism,Others,False
+Fraser Suites Riyadh,Others,False
+Grand Millennium Tabuk,Others,False
+Address Beach Resort DY,Hotel Reservation,False
+Super 8 by Wyndham Dubai Deira,Excursion,False
+DhiscoRotana,Excursion,False
+Avani Ibn Battuta Dubai,Excursion,False
+Grand Excelsior Hotel - Bur Dubai,Excursion,False
+"The May Fair, A Radisson Collection Hotel DY",Hotel Reservation,False
+Grand Cosmopolitan Hotel,Excursion,False
+Grand Mercure Airport Dubai,Excursion,False
+Ibis Styles Airport Dubai Hotel,Excursion,False
+Wyndham Dubai Deira,Excursion,False
+Double Tree by Hilton Ras Al Khaimah,Excursion,False
+Carlton Al Barsha DY,Hotel Reservation,False
+"Al Maha, a Luxury Collection Desert Resort & Spa,",Others,False
+Ramada by Wyndham Dubai Deira,Excursion,False
+Park Arjan Rotana Hotel,Excursion,False
+"Aloft City Centre Deira, Duba",Excursion,False
+Hyatt Place Dubai Jumeirah,Excursion,False
+AVANI + Palm View Dubai Hotel & Suites,Excursion,False
+Kingsgate Hotel Abu Dhabi,Excursion,False
+Longbeach Campground by Binmajid,Excursion,False
+Lotus Grand Hotel,Excursion,False
+Occidental Al Jaddaf,Excursion,False
+Radisson Blu Dubai Canal View,Excursion,False
+Jannah Place Dubai Marina,Excursion,False
+Al Jaddaf Rotana,Excursion,False
+Holiday Inn Dubai Al-Maktoum Airport,Excursion,False
+Staybridge Suites Dubai Al Maktoum Airport Hotel,Excursion,False
+Canopy by Hilton Dubai Al Seef,Excursion,False
+Vida Beach Resort Umm Al Quwain DY,Hotel Reservation,False
+Ramada by Whyndham Al-Khobar,Others,False
+DhiscoTravelClick,Excursion,False
+Al Riyadh Travels,Excursion,False
+H2H - Infinite Gekko,Hotel Reservation,False
+Aloft Me'aisam,Excursion,False
+H2H - Roibos,Hotel Reservation,False
+HILTON LUXOR RESORT & SPA,Excursion,False
+Aloft Dubai South,Excursion,False
+"Radisson Blu Hotel, Abu Dhabi Yas Island",Excursion,False
+Rutwa Tourism LLC,Hotel Reservation,False
+SLS Dubai Hotel & Residences,Excursion,False
+Mirage Bab Al Bahr Resort & Tower,Excursion,False
+Ultima Gstaad DY,Hotel Reservation,False
+Hotel Holiday International DY,Hotel Reservation,False
+Ultima Courchevel DY,Hotel Reservation,False
+The Uptown Hotel Apartments DY,Hotel Reservation,False
+Th8 Palm,Excursion,False
+Adagio Premium The Palm,Excursion,False
+Aims health care,Others,False
+Sofitel Dubai The Obelisk,Excursion,False
+Hilton Abu Dhabi Yas Island,Excursion,False
+NEW LOGIC LLC,Others,False
+Four Seasons Astir Palace Hotel Athens,Others,False
+Jetset services,Air Ticket,False
+Time Asma Hotel,Excursion,False
+"The St. Regis Dubai, The Palm",Excursion,False
+TIME Onyx Hotel Apartments DY,Hotel Reservation,False
+TIME Rako Hotel DY,Hotel Reservation,False
+TIME Dammam Residence DY,Hotel Reservation,False
+City Seasons Al Hamra Hotel DY,Hotel Reservation,False
+City Avenue Al Reqqa Hotel,Excursion,False
+Crowne Plaza Dubai Marina,Excursion,False
+InterContinental Fujairah Resort  Hotel,Excursion,False
+Sunny Travel,Others,False
+"The Chedi Al Bait, Sharjah",Excursion,False
+J5 Homes Al barsha LLC,Excursion,False
+Strada Seyahat Acentalığı Ltd. Şti,Others,False
+ROYAL SKY,Others,False
+Address Beach Resort Fujairah,Excursion,False
+RIU Dubai Hotel,Excursion,False
+Hotel Srbija A.D.,Others,False
+Fairmont Rio de Janeiro Copacabana,Others,False
+HÔTEL DU PALAIS,Others,False
+Four Seasons Hotel Istanbul at the Bosphorus,Others,False
+HILTON BAKU,Others,False
+Almina Hotel,Excursion,False
+"Caravana beach resort, Al Zorah, Ajman DY",Hotel Reservation,False
+Asia Gardens Hotel & Thai Spa,Others,False
+Raffles The Palm Dubai,Excursion,False
+Taidys hotel,Hotel Reservation,False
+INTERCONTINENTAL WIEN,Others,False
+Pulitzer Amsterdam,Others,False
+Suha JBR Hotel Apartments,Excursion,False
+Suha Creek Hotel Apartments,Excursion,False
+Suha Mina Rashid Hotel Apartments,Excursion,False
+Suha Park Hotel Apartments,Excursion,False
+Sunway Clio Hotel DY,Hotel Reservation,False
+Sunway Pyramid Hotel DY,Hotel Reservation,False
+Sunway Resort Hotel & Spa DY,Hotel Reservation,False
+Hotel Savoy Crest Apartment – Bur Dubai,Excursion,False
+The Hotel Martinez,Others,False
+Hotel Pitrizza,Others,False
+Anantara Villa Padierna Palace Benahavis Marbella,Others,False
+Almarsa Travel & Tourism,Others,False
+Rosewood Jeddah,Others,False
+Hideaway Beach Resort & Spa Maldives DY,Hotel Reservation,False
+Lily Beach Resort & Spa DY,Hotel Reservation,False
+"Mandarin Oriental, Geneva",Others,False
+Hotel Palace Berlin,Others,False
+Refan Travel & Tourism,Others,False
+Almanac Barcelona,Others,False
+Hotel-Restaurant Schwanen,Others,False
+Brussels Airlines,Air Ticket,False
+Turkish Airlines,Air Ticket,False
+Expo 2020,Others,False
+Nobu Hotel Marbella,Others,False
+Boho club,Others,False
+Hotel RH Princesa,Others,False
+H10 Porto Poniente,Hotel Reservation,False
+Centara Mirage Beach Resort Dubai,Excursion,False
+Millennium Madinah Airport,Others,False
+Kempinski Summerland Hotel,Others,False
+FIRST CONCIERGE LUX SL,Others,False
+"The Ritz-Carlton, Riyadh",Others,False
+"Marco Polo Hotel, Dubai",Excursion,False
+B Hotel Bishkek,Excursion,False
+Sofitel Bahrain Zallaq Thalassa Sea & Spa,Others,False
+Rove City Walk,Excursion,False
+ERTH AbuDhabi,Excursion,False
+Sun Siyam Olhuveli,Others,False
+Al Khoory Sky Garden Hotel,Excursion,False
+HYDE Hotel Dubai,Excursion,False
+Al Faisaliah Hotel,Excursion,False
+Furaveri Maldives,Others,False
+Hotel Eden,Others,False
+Les Jardins du Marais DY,Hotel Reservation,False
+the Bastille patio DY,Hotel Reservation,False
+Zakher Travel,Others,False
+The Dubai EDITION,Excursion,False
+Fairmont Amman,Others,False
+HYATT REGENCY RIYADH OLAYA,Others,False
+"THE WB ABU DHABI, CURIO COLLECTION BY HILTON",Excursion,False
+25hours Hotel One Central,Excursion,False
+TIME ONYX HOTEL APARTMNETS,Excursion,False
+APARTHOTEL ADAGIO DUBAI DEIRA,Excursion,False
+LE MERIDIEN RIYADH,Others,False
+Kuwait Airways Holidays,Others,False
+Days Hotel by Wyndham Dubai Deira,Excursion,False
+DOUBLETREE BY HILTON SHARJAH WATERFRONT HOTEL & RE,Excursion,False
+ELEMENT AL MINA,Excursion,False
+ELEMENT DUBAI AIRPORT,Excursion,False
+ROYAL FALCON HOTEL,Others,False
+Kingsgate Hotel Al Jaddaf,Excursion,False
+Kingsgate Canal Hotel,Excursion,False
+Aloft Dubai Airport,Excursion,False
+Aloft Al Mina,Excursion,False
+Ciaoflorence italy experta,Others,False
+Citymax Hotel Business Bay DY,Hotel Reservation,False
+Citymax Hotel Ras Al Khaimah DY,Hotel Reservation,False
+IntercityHotel Dubai Jaddaf Waterfront,Excursion,False
+S19 Hotel Al Jaddaf,Excursion,False
+MOVENPICK Hotel & Resort Al Bida'a Kuwait Hotel,Others,False
+MOVENPICK Hotel & Resort Al Bida'a Kuwait,Others,False
+Novotel Jumeirah Village Triangle,Excursion,False
+Hôtel Fahrenheit Seven Courchevel,Others,False
+Four Seasons Hotel Moscow,Others,False
+DoubleTree by Hilton Abu Dhabi Yas Island Residenc,Excursion,False
+Saray Deluxe Hotel Apartments,Excursion,False
+Best Western Plus Mahaboula - Kuwait,Others,False
+Millennium Place Mirdif Hotel,Excursion,False
+DoubleTree by Hilton Dubai M Square Hotel & Reside,Excursion,False
+"Marriott Hotel Downtown, Abu Dhabi",Excursion,False
+"Courtyard by Marriott Culture Village, Dubai",Excursion,False
+"Taj Exotica Resort & Spa, The Palm, Dubai",Excursion,False
+Egyliere luxury Travel,Hotel Reservation,False
+Tiffany Auto Garage,Others,False
+Revier Hotel,Excursion,False
+City Seasons Hotel Muscat,Others,False
+THE FIRST COLLECTION HOTEL JUMEIRAH VILLAGE CIRCLE,Excursion,False
+JWS - PrimeTravel - (JWS),Hotel Reservation,False
+LEGOLAND Dubai Hotel,Excursion,False
+City Seasons Hotel Al Ain DY,Hotel Reservation,False
+Anantara World Islands Dubai Resort,Excursion,False
+Conexion Travel,Others,False
+Dorak Tours,Hotel Reservation,False
+Beach Walk Hotel,Excursion,False
+Hotel Vier Jahreszeiten Kempinski München,Others,False
+InterContinental Ras Al Khaimah Mina Al Arab,Excursion,False
+Paramount Hotel Midtown,Excursion,False
+Rove Expo 2020,Excursion,False
+South Palm Resort Maldives,Others,False
+VIP DOCTOR Healthcare.,Others,False
+The Three Corners Hotels & Resorts El-Gouna,Others,False
+Green Access,Others,False
+Merfal Hotel Apartments,Excursion,False
+Merfal Royal new Riyadh,Others,False
+Jaunt In Time  Travel,Others,False
+Hotel d'Angleterre·,Others,False
+Fairmont Grand Hotel Geneva,Others,False
+Mövenpick Hotel Gammarth,Others,False
+Staybridge Suites Dubai Financial Centre,Excursion,False
+Sandy Beach Hotel & Resort,Excursion,False
+BellaVita – Artisans of Lifestyle,Others,False
+Citymax Hotel Al Barsha at the Mall,Excursion,False
+W Dubai - Mina Seyahi,Excursion,False
+Carlton Dubai Creek Hotel DY,Hotel Reservation,False
+CVK Park Bosphorus Hotel Istanbul DY,Hotel Reservation,False
+JANNAT TOURS LLC,Others,False
+Sheraton Bishkek DY,Others,False
+AIRPORT PASSES MEET & ASSIST SERVICE,Excursion,False
+Radisson Dubai DAMAC Hills,Excursion,False
+De L’Europe,Others,False
+Extranet Supplier Moon line,Hotel Reservation,False
+Baron Hotels & Resorts Egypt,Others,False
+The Peninsula Paris,Others,False
+Tenuta Moreno,Others,False
+TopTravelTrip,Air Ticket,False
+"Chileno Bay Resort & Residences, Los Cabos",Others,False
+Savoy palace,Others,False
+Extranet Supplier The Vibes World,Hotel Reservation,False
+Kensho boutique Hotels & Villa,Others,False
+Hilton Dubai Palm Jumeirah,Excursion,False
+KTS FRENCH RIVIERA,Others,False
+Fontainebleau Miami Beach,Others,False
+JW Marriott Essex House New York,Others,False
+"Courtyard by Marriott Al Barsha, Dubai",Excursion,False
+Sun International,Excursion,False
+Four Seasons Hotel Bengaluru,Others,False
+Embassy Suites by Hilton Austin Central,Others,False
+Al Hamra Residence,Excursion,False
+The Regency Hotel Kuwait DY,Others,False
+"Courtyard by Marriot World Trade Centre, Dubai",Excursion,False
+Al Khoory Courtyard Hotel,Excursion,False
+Copthorne Lakeview Hotel & Executive Apartments,Excursion,False
+The St. Regis Moscow Nikolskaya,Others,False
+ECOS Dubai Hotel at Al Furjan,Excursion,False
+Premier Inn Dubai Barsha Heights,Excursion,False
+Premier Inn Dubai Investments Park,Excursion,False
+First Travel Agence De Voyage ET Tourisme,Others,False
+Limousine Service France,Hotel Reservation,False
+"V Villas Phuket, M Gallery Hotel Collection",Others,False
+Sachsenpark-Hotel,Others,False
+DELTAPARK VITALRESORT,Others,False
+HOTEL MONACO & GRAND CANAL,Others,False
+"Tarčin Forest Resort & Spa, MGallery Hotel Collect",Others,False
+Bvlgari Hotel Paris,Others,False
+Movenpick Jumeirah Village Triangle,Excursion,False
+Marriott Resort Palm Jumeirah Dubai,Excursion,False
+Palm Tower Palm Jumeirah,Excursion,False
+Siloso Beach Resort - Sentosa,Excursion,False
+H2H - Eurobeds,Hotel Reservation,False
+PARKROYAL COLLECTION Marina Bay,Excursion,False
+Pullman Sharjah Hotel,Excursion,False
+Preimo Urban Mobility,Others,False
+Carlton Dubai Creek Hotel,Excursion,False
+H2H - GetARoom,Hotel Reservation,False
+Extranet Supplier AIT TRAVEL,Hotel Reservation,False
+H2H - RateHawk,Hotel Reservation,False
+Escursioni Italiane S.r.l.,Others,False
+Mimino Travel Georgia,Others,False
+"Millennium Court, Budapest - Marriott Executive Ap",Others,False
+Millennium Central Downtown Abu Dhabi,Excursion,False
+BALKAN TRAVEL LLC,Others,False
+H2H - Ixpira,Hotel Reservation,False
+IBIS Sydney Darling Harbour,Others,False
+Transferz,Others,False
+DON CARLOS LEISURE RESORT & SPA,Others,False
+H2H - Rakuten,Hotel Reservation,False
+Virtuous Travel & Concierge,Others,False
+Regency Travel (PRV ISA LlINK),Others,False
+Wyndham Residences The Palm,Excursion,False
+Dynamic SUNRISE group,Others,False
+H2H - PAXIMUM,Hotel Reservation,False
+Thai Adventure Club Hotel,Others,False
+THE FIRST COLLECTION HOTEL BUSINESS BAY,Excursion,False
+LE NEGRESCO,Others,False
+Dynamic Mena Hotels,Others,False
+Blue diamond hotel,Excursion,False
+BÜRGENSTOCK HOTELS AG,Others,False
+Anantara Al Jabal Al Akhdar Resort Oman,Others,False
+Grand Kingsgate Waterfront By Millennium Hotels,Others,False
+NOVOTEL Sharm El-Sheikh,Others,False
+Thai Adventure Club,Others,False
+hotel lutetia paris,Others,False
+Marijani Zanzibar,Others,False
+Radisson Resort Ras Al Khaimah Marjan Island,Excursion,False
+CROWNE PLAZA RIYADH AL WAHA,Others,False
+Four Seasons Hotel Megève,Others,False
+"Al Meena St. Al Layyeh, Sharjah",Excursion,False
+"The Langham, Boston",Others,False
+Radisson Beach Resort Palm Jumeirah,Excursion,False
+NH Collection Dubai The Palm,Excursion,False
+Royal Wings - Egypt,Others,False
+The Twenty Two,Others,False
+H2H - Allbeds,Hotel Reservation,False
+Ibis Styles Dubai Deira,Excursion,False
+H2H - Hotelmize,Hotel Reservation,False
+FIVE Zurich Hotel DY,Others,False
+"Al Wathba, a Luxury Collection Hotel, Abu Dhabi",Excursion,False
+Royal M Al Aqah Beach Resort DY,Others,False
+Flamingo Beach Resort,Others,False
+Capella Bangkok,Others,False
+Radisson Blu Hotel Al Ain,Excursion,False
+AMANPURI Thailand,Others,False
+Elinor GmbH Tours & Travel,Others,False
+TIME Moonstone Hotel Apartments DY,Others,False
+Hotel Okura Amsterdam,Others,False
+Leonardo Royal Hotel Düsseldorf Königsallee,Others,False
+"Atlantis The Royal, Dubai",Excursion,False
+HYATT REGENCY DÜSSELDORF,Others,False
+Majestic Hotel & SPA Barcelona,Others,False
+TIME Coral Nuweiba resort DY,Others,False
+Al Muruj Hotel Apartments DY,Others,False
+Extranet Supplier Aran Tourism Consultancy FZE,Hotel Reservation,False
+Hampton by Hilton Marjan Island,Excursion,False
+Nova Maldives,Others,False
+Safir Fintas Hotel Kuwait,Others,False
+HOTEL KAISERHOF WIEN,Others,False
+TIME Moonstone Hotel Apartments,Excursion,False
+Address Grand Creek Harbor,Excursion,False
+Marriott Executive Apartment abu Dhabi,Excursion,False
+Graficon Destination Management company,Others,False
+Hotel Scala City Centre,Excursion,False
+Pearl Swiss Hotel,Others,False
+Edge Creekside Hotel,Excursion,False
+DoubleTree by Hilton Frankfurt,Others,False
+AAT Limousine L.L.C,Hotel Reservation,False
+HOLIDAY INN & Suites Dubai Science Park,Excursion,False
+Select Tourism,Others,False
+Voco Dubai The Palm,Excursion,False
+Royal Star Boats Rental LLC,Hotel Reservation,False
+Holiday Inn and Suites Dubai Science Park,Excursion,False
+Blue Line car Rental,Hotel Reservation,False
+Nassima Tower Hotel Apartments DY,Others,False
+GETTRANSFER.COM,Hotel Reservation,False
+Dream Night tour,Others,False
+VIPPON Holidays,Others,False
+Bespoke limousine,Hotel Reservation,False
+KOI Technologies FZCO,Others,False
+Palace Beach Resort Fujairah,Excursion,False
+DW Travel LLC,Excursion,False
+NOVOTEL JAZAN,Others,False
+Holiday Villa Hail Hotel,Others,False
+Oakwood Hotel & Residence Bangkok DY,Others,False
+Bluedot Charters & Air Ambulance,Others,False
+Dhafra Beach Hotel,Others,False
+Phoenix One Tourism,Others,False
+Tripstick,Others,False
+GSTAAD PALACE,Others,False
+H2H - G2 Travel,Hotel Reservation,False
+Asiana Grand Hotel,Excursion,False
+Vueling Air,Others,False
+Mirage Group,Others,False
+Al Hamra Village Hotel,Excursion,False
+Rixos Marina Abu Dhabi,Excursion,False
+HCD-Derbysoft Hilton,Excursion,False
+Four Seasons Hotel Madrid,Others,False
+Symphony Style Hotel,Excursion,False
+Tulip Plaza Hotel - Sakaka,Excursion,False
+Terra Solis Dubai,Excursion,False
+Remal Hotel,Excursion,False
+DAR AL TAQWA for Haj & Umrah,Excursion,False
+Royal M Hotel & Resort Al Aqah Beach,Excursion,False
+Rihlaty Travel & Tours Sdn. Bhd,Others,False
+Al BUSTAN Group DY,Others,False
+Extranet Supplier Start Travel,Hotel Reservation,False
+Sun Series Group Thailand,Others,False
+Extranet Supplier IBK Travel,Hotel Reservation,False
+MENA APARTHOTEL,Excursion,False
+Extranet Supplier Mimino Travel,Hotel Reservation,False
+Nawras  Hospitality,Excursion,False
+Grand Plaza Hotel & Congress Center DY,Others,False
+Vida Residences,Excursion,False
+Hotel Bowmann Paris DY,Others,False
+Extranet Supplier MyHotels.SA,Hotel Reservation,False
+Connexion Limousine Services.,Hotel Reservation,False
+AITKEN SPENCE HOTELS DY,Others,False
+H2H - SafaTravel,Hotel Reservation,False
+Radisson Hotel Jalandhar,Others,False
+JW Marriott Hotel Chandigarh,Others,False
+BAB AL NOJOUM HUDAYRIYAT,Others,False
+Rixos Premium Saadiyat Island,Excursion,False
+HCC - Dhisco Kerzner,Excursion,False
+HCC - Dhisco Jumeirah,Excursion,False
+HCC - Dhisco Harrahs Entertainment,Excursion,False
+HCC - Dhisco Como,Excursion,False
+HCC - Dhisco HotelREZ Limited,Excursion,False
+HCC - Dhisco Relais and Chateaux,Excursion,False
+HCC - Dhisco Preferred Hotels and Resorts,Excursion,False
+HCC - Dhisco Rosewood,Excursion,False
+Walddorf Astoria kuwait,Others,False
+Jood Hotel Apartments,Excursion,False
+Hotel Hafen Hamburg,Others,False
+Cheval Maison The Palm Dubai,Excursion,False
+HAIMOUR TRANSPORT,Hotel Reservation,False
+COMO Metropolitan Bangkok,Others,False
+The Westin Zagreb,Others,False
+Extranet Supplier Pulse Resorts,Hotel Reservation,False
+Club Prive By Rixos Premium Saadiyat Island,Excursion,False
+Sonder business bay,Excursion,False
+Sheraton Khalidiya Hotel abu dhabi,Excursion,False
+NOBU HOTEL LONDON PORTMAN SQUARE UK,Others,False
+GRAND HYATT ISTANBUL,Others,False
+H2H - PriceTravel,Hotel Reservation,False
+Derbysoft Rotana,Excursion,False
+Park Inn by Radisson Dubai Motor City,Excursion,False
+Tulip Al Barsha Hotel Apartment Dubai,Excursion,False
+H2H - DidaTravel,Hotel Reservation,False
+Extranet Supplier Travel Armenia,Hotel Reservation,False
+MOVENPICK Resort Al Marjan Island,Excursion,False
+Juniper Test,Others,False
+Hala Inn Hotel Apartments,Excursion,False
+Al Hedaya Travel and Tours,Others,False
+The First Collection Waterfront,Excursion,False
+RNB Special Tours,Others,False
+Royal American,Others,False
+GRAND HYATT AL KHOBAR,Others,False
+Sonder Downtown Towers,Excursion,False
+"COURTYARD BY MARRIOTT WORLD TRADE CENTER, ABU DHABI",Excursion,False
+Radisson Blu Hotel Ajman,Excursion,False
+Holiday Inn Dubai Business Bay,Excursion,False
+Extranet Supplier Salalah International Hotel,Hotel Reservation,False
+Extranet Deyaar Makkah,Hotel Reservation,False
+Premier Inn Dragon Mart,Excursion,False
+Extranet Supplier Fast Bookings Travel and Tourism,Hotel Reservation,False
+Cote d'Azur Hotel - Monaco - Dubai World Islands - Adults OnlyCote d'Azur Hotel - Monaco - Dubai World Islands - Adults Only,Excursion,False
+Courtyard Hotel Waterfall City,Excursion,False
+Canal Central Hotel Business Bay,Excursion,False
+One & Only One Zaabeel,Excursion,False
+H2H - ITravex,Hotel Reservation,False
+Extranet Supplier Malahini Kuda Bandos Resort DY,Hotel Reservation,False
+Extranet Supplier Arkaan Al Motamer,Hotel Reservation,False
+The Ritz-Carlton Maldives Fari Islands,Others,False
+Anantara Mina Al Arab Ras Al Khaimah Resort,Excursion,False
+Hues Boutique Hotel,Others,False
+Extranet Rowaa Golden,Hotel Reservation,False
+InterContinental Fujairah Resort,Excursion,False
+V Hotel Fujairah,Excursion,False
+JANA Travel,Excursion,False
+AAM Limousine LLC,Hotel Reservation,False
+H2H - HotelTrader,Hotel Reservation,False
+Alberni Jebel Hafeet Hotel & Resort Al Ain,Excursion,False
+Paramount Hotel Midtown Dubai DY,Others,False
+Paramount Hotel Dubai DY,Others,False
+SHARIF HOUSE L.L.C FZ,Others,False
+"The Ritz-Carlton Orlando, Grande Lakes",Others,False
+D W Travel Repatriation,Hotel Reservation,False
+Aviation Services Management LTD,Others,False
+Parklane a Luxury Collection Resort & Spa Limassol,Others,False
+Vision Imperial Hotel,Excursion,False
+Uptown Dubai Hotel,Excursion,False
+H2H- Jumeirah,Hotel Reservation,False
+Wescott Hotel Dubai,Excursion,False
+Extranet Travel Map Tourism,Hotel Reservation,False
+FIVE Palm Jumeirah Dubai DY,Others,False
+Extranet Supplier Flash Tours,Hotel Reservation,False
+Lopota Lake Resort & Spa,Others,False
+DAMAC Maison Cour Jardin,Excursion,False
+Radisson Blu Hotel & Resort Al Ain,Excursion,False
+Centara Grand Island Resort & Spa Maldives,Others,False
+Le Meridien Hotel Abu Dhabi,Excursion,False
+H2H - Booking.com,Hotel Reservation,False
+Vida Creek Beach,Excursion,False
+Vida Creek Harbour,Excursion,False
+JW Marriott Hotel Marina,Excursion,False
+"The Heritage Hotel, Autograph Collection",Excursion,False
+"Hotel Boulevard, Autograph Collection",Others,False
+Extranet Supplier Manazeli Jeddah,Hotel Reservation,False
+Abu Dhabi Aviation,Air Ticket,False
+Prestige Car Limousine,Others,False
+Royal Regency Suites,Others,False
+H2H - W2M,Hotel Reservation,False
+Staybridge Suites Dubai Internet City,Excursion,False
+Staybridge Suites Dubai Business Bay,Excursion,False
+Sheraton Khalidiya Abu Dhabi,Excursion,False
+Extranet Supplier StayLuxx,Hotel Reservation,False
+Best Western Premier M Four Hotel,Excursion,False
+Pyramisa Hotel Apartments Dubailand,Excursion,False
+Lux* South Ari Atoll,Excursion,False
+Extranet Concord Travel Group,Hotel Reservation,False
+Four Points by Sheraton Al Ain,Excursion,False
+Fortis Hotel Fujairah,Excursion,False
+Lux* Marijani,Excursion,False
+Lux* Grand Baie,Excursion,False
+Extranet Supplier Innoglobe Travel & Tours,Hotel Reservation,False
+Santhiya Koh Phangan Resort & Spa,Others,False
+Santhiya Koh Yao Yai Resort & Spa,Others,False
+Santhiya Phuket Natai Resort & Spa,Others,False
+Santhiya Tree Koh Chang Resort,Others,False
+Extranet Supplier Travco Jordan,Hotel Reservation,False
+Bab Al Nojoum Bateen Liwa,Others,False
+Bab Al Nojoum Al Mugheirah,Others,False
+Bab Al Nojoum Hudayriyat Villas,Others,False
+Lux* Bella Mare,Excursion,False
+Golden Tulip Downtown Abu Dhabi,Excursion,False
+Grand Regency Doha Trademark Collection by Wyndham,Others,False
+"COMO Point Yamu, Phuket",Others,False
+Cloud7 Residence AlUla,Others,False
+H2H - Deutsche Hospitality (DerbySoft),Hotel Reservation,False
+Extranet Supplier Warwick Palm Beach Hotel,Hotel Reservation,False
+Le Wana Hotel,Others,False
+COMO Maalifushi,Others,False
+Anantara Desaru Coast Resort & Villas,Others,False
+Shaza Doha Hotel,Others,False
+La Suite Dubai Hotel & Apartments,Excursion,False
+Dubai Airport Terminal Hotel,Excursion,False
+Vida Marina Resort Marassi DY,Others,False
+Al Alamein Hotel DY,Others,False
+Address Marassi Golf Resort DY,Others,False
+Address Beach Resort Marassi DY,Others,False
+Warwick Doha Hotel,Others,False
+Extranet Supplier Al Tahadi Travel & Tours,Hotel Reservation,False
+HCD - Derbysoft Time Hotels,Excursion,False
+H2H - TDSTravel - (JWS),Hotel Reservation,False
+InterContinental Residences Business Bay,Excursion,False
+SIRO One Za’abeel,Others,False
+Sofitel Ambassador Seoul Hotel,Others,False
+LUX* Grand Gaube,Excursion,False
+LUX* Le Morne,Excursion,False
+Millennia Hotel Olaya  ALALFYEIH HOTEL,Others,False
+Meraki Resort Sharm El Sheikh-Adults Only,Others,False
+White Hills Resort,Others,False
+Sunrise Arabian Beach Resort,Others,False
+Tamassa Bel Ombre,Others,False
+"SALT of Palmar, an adult-only boutique hotel, a member of Design Hotels",Others,False
+Extranet Supplier Corniche Hotel Sharjah,Hotel Reservation,False
+Extranet Supplier Minar,Hotel Reservation,False
+Grand Cosmopolitan Hotel - Dubai DY,Others,False
+SUNRISE Alex Avenue Hotel,Others,False
+Sofitel Al Hamra Beach Resort,Excursion,False
+Nobu Hotel London Portman Square,Others,False
+Park Regis by Prince Dubai Islands,Excursion,False
+White Hills Resort – (Posh Club),Others,False
+SUNRISE Arabian Beach Resort -Grand Select,Others,False
+LUX* Saint Gilles Resort,Others,False
+"Nika Island Resort & Spa, Maldives",Others,False
+"The Chedi Katara Hotel & Resort, Doha",Others,False
+Damac Hotels & Resorts DY,Others,False
+Address Beach Resort Bahrain DY,Others,False
+Vida Beach Resort Marassi Al Bahrain DY,Others,False
+Armani Hotel Dubai DY,Others,False
+The Address Downtown Dubai DY,Others,False
+The Palace Downtown Dubai DY,Others,False
+Address Grand Creek Harbour DY,Others,False
+Palace Dubai Creek Harbour DY,Others,False
+Vida Dubai Marina & Yacht Club DY,Others,False
+Vida Creek Beach Hotel DY,Others,False
+Vida Creek Harbour DY,Others,False
+Vida Emirates Hills DY,Others,False
+Address Sky View DY,Others,False
+Address Dubai Mall DY,Others,False
+Samawa Living Resort,Others,False
+InterContinental Residences Abu Dhabi,Excursion,False
+H2H - Independents Hotels (Derbysoft),Hotel Reservation,False
+H2H - YuppiTravel,Others,False
