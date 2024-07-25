@@ -97,7 +97,8 @@ def create_total_converted(df, workbook):
         st.stop()
 
     if area_not_found:
-        st.warning("These areas will be considered ROW: " + ", ".join(map(str, set(area_not_found))))
+        cleaned_areas = [str(area) for area in set(area_not_found) if area is not None and area != 'nan']
+        st.warning("These areas will be considered ROW: " + ", ".join(cleaned_areas))
 
 
     df_copy = df.copy() 
