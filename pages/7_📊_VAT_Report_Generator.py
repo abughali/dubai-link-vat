@@ -152,6 +152,17 @@ def create_total_converted(df, workbook):
     return df_copy
 
 ############################## HR TAX ###############################################################################
+list_of_strings = ["TDF", "COVER TDF", "COVERING TDF"]
+
+def check_not_in_list(value):
+    if isinstance(value, str):  # Check if the value is a string
+        return value.upper() not in list_of_strings
+    return False  # Return False for non-string values
+
+def check_in_list(value):
+    if isinstance(value, str):  # Check if the value is a string
+        return value.upper() in list_of_strings
+    return False  # Return False for non-string values
 
 def create_hr_tax_sheet(df, workbook):
     worksheet = workbook.add_worksheet('HR TAX')
@@ -165,8 +176,10 @@ def create_hr_tax_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     header_format2 = workbook.add_format({'bg_color': '#ffff00', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
+
+
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Hotel Reservation') & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Hotel Reservation') ]#& df['Description'].apply(check_not_in_list)]#& (df['Product Type'] != 'Adjustment')]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -285,7 +298,7 @@ def create_hr_zero_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Hotel Reservation') & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Hotel Reservation') ]#& (df['Product Type'] != 'Adjustment')]
 
     column_order = ['Country',
                     'Emirate',
@@ -349,7 +362,7 @@ def create_ex_tax_sheet(df, workbook):
     header_format2 = workbook.add_format({'bg_color': '#ffff00', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Excursion') & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Excursion') ]#& df['Description'].apply(check_not_in_list)]# & (df['Product Type'] != 'Adjustment')]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -459,7 +472,7 @@ def create_excursion_zero_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Excursion') & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Excursion') ]#& (df['Product Type'] != 'Adjustment')]
 
     column_order = ['Country',
                     'Emirate',
@@ -584,7 +597,7 @@ def create_visa_sheet(df, workbook):
     header_format2 = workbook.add_format({'bg_color': '#ffff00', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Visa') & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Visa') ]#& (df['Product Type'] != 'Adjustment')]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -699,7 +712,7 @@ def create_others_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[df['Service Type'] == 'Other']
+    df = df.loc[(df['Service Type'] == 'Other') ]#| df['Description'].apply(check_in_list)]
 
     column_order = ['Country',
                     'Emirate',
