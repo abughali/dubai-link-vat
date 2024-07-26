@@ -24,13 +24,15 @@ def create_raw_imported(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
-               format = date_format
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
+                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
-               format = float_format
+                worksheet.write_number(row_num, col_num, value, float_format)
             else:
-                format = None
-            worksheet.write(row_num, col_num, value, format)
+                worksheet.write(row_num, col_num, value)
+
 
     # Calculate the last data row dynamically
     rows = len(df) + 1
@@ -127,10 +129,12 @@ def create_total_converted(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
-               worksheet.write_datetime(row_num, col_num, value, date_format)
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
+                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
-               worksheet.write_number(row_num, col_num, value, float_format)
+                worksheet.write_number(row_num, col_num, value, float_format)
             else:
                 worksheet.write(row_num, col_num, value)
 
@@ -155,9 +159,11 @@ def create_total_converted(df, workbook):
 list_of_strings = ["TDF", "COVER TDF", "COVERING TDF"]
 
 def check_not_in_list(value):
-    if isinstance(value, str):  # Check if the value is a string
+    if pd.isnull(value):  # Check if the value is null
+        return True
+    elif isinstance(value, str):  # Check if the value is a string
         return value.upper() not in list_of_strings
-    return False  # Return False for non-string values
+    return False  # Return False for non-string, non-null values
 
 def check_in_list(value):
     if isinstance(value, str):  # Check if the value is a string
@@ -179,7 +185,7 @@ def create_hr_tax_sheet(df, workbook):
 
 
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Hotel Reservation') ]#& df['Description'].apply(check_not_in_list)]#& (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Hotel Reservation') & df['Description'].apply(check_not_in_list)]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -256,7 +262,9 @@ def create_hr_tax_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                 if value == 0:  # Check if the value is zero
@@ -298,7 +306,7 @@ def create_hr_zero_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Hotel Reservation') ]#& (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Hotel Reservation')]
 
     column_order = ['Country',
                     'Emirate',
@@ -325,7 +333,9 @@ def create_hr_zero_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                worksheet.write_number(row_num, col_num, value, float_format)
@@ -362,7 +372,7 @@ def create_ex_tax_sheet(df, workbook):
     header_format2 = workbook.add_format({'bg_color': '#ffff00', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Excursion') ]#& df['Description'].apply(check_not_in_list)]# & (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Excursion') & df['Description'].apply(check_not_in_list)]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -432,7 +442,9 @@ def create_ex_tax_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                 if value == 0:  # Check if the value is zero
@@ -472,7 +484,7 @@ def create_excursion_zero_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Excursion') ]#& (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'ROW') & (df['Service Type'] == 'Excursion') ]
 
     column_order = ['Country',
                     'Emirate',
@@ -560,7 +572,9 @@ def create_air_ticket_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                worksheet.write_number(row_num, col_num, value, float_format)
@@ -597,7 +611,7 @@ def create_visa_sheet(df, workbook):
     header_format2 = workbook.add_format({'bg_color': '#ffff00', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Visa') ]#& (df['Product Type'] != 'Adjustment')]
+    df = df.loc[(df['Country'] == 'UAE') & (df['Service Type'] == 'Visa') ]
 
     suppliers_df = utils.load_rules('suppliers.csv')
     vat_df = utils.load_rules('vat_setup.csv')
@@ -668,7 +682,9 @@ def create_visa_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                 if value == 0:  # Check if the value is zero
@@ -712,7 +728,7 @@ def create_others_sheet(df, workbook):
     header_format = workbook.add_format({'bg_color': '#D9E3C0', 'bold': False, 'border': 0})
     total_format = workbook.add_format({'num_format': '#,##0.00','bg_color': '#ffe6e6', 'bold': True})
     
-    df = df.loc[(df['Service Type'] == 'Other') ]#| df['Description'].apply(check_in_list)]
+    df = df.loc[(df['Service Type'] == 'Other') | df['Description'].apply(check_in_list)]
 
     column_order = ['Country',
                     'Emirate',
@@ -739,7 +755,9 @@ def create_others_sheet(df, workbook):
     # Write data from DataFrame to worksheet
     for row_num, (index, row) in enumerate(df.iterrows(), start=1):
         for col_num, value in enumerate(row):
-            if isinstance(value, pd.Timestamp):
+            if pd.isnull(value):
+                worksheet.write(row_num, col_num, '')
+            elif isinstance(value, pd.Timestamp):
                worksheet.write_datetime(row_num, col_num, value, date_format)
             elif isinstance(value, float):
                worksheet.write_number(row_num, col_num, value, float_format)
