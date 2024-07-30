@@ -5,8 +5,6 @@ import yaml
 from yaml.loader import SafeLoader
 from common import juniper_api, utils
 
-
-
 def bill_save_csv_files(df, start_date_str, end_date_str):
     # Exclude rows with negative amounts
     df_positive = df[df["Line Amount"] >= 0]
@@ -20,7 +18,7 @@ def bill_save_csv_files(df, start_date_str, end_date_str):
     chunks = []
     current_size = 0
     
-    for name, group in grouped:
+    for _, group in grouped:
         group_size = len(group)
         if current_size + group_size > chunk_size:
             chunks.append(pd.concat(current_chunk))
