@@ -322,6 +322,23 @@ def get_bill_details(invoice_date_from, invoice_date_to):
         st.error(f"Failed to fetch invoices. Status code: {response.status_code}")
         return pd.DataFrame()
 
+def add_suffix_to_duplicate_bills(df):
+    """
+    Adds suffixes to duplicate Bill No where there are multiple suppliers.
+    """
+    # Identify duplicate 'Bill No' with different suppliers
+    duplicate_bills = df.groupby('Bill No').filter(lambda x: x['Supplier'].nunique() > 1)
+
+    # Apply suffix to duplicates
+    for bill_no in duplicate_bills['Bill No'].unique():
+        suppliers = df[df['Bill No'] == bill_no]['Supplier'].unique()
+        for idx, supplier in enumerate(suppliers):
+            if idx == 0:
+                continue  # Skip the first supplier to retain the original Bill No
+            suffix = f"-{idx}"
+            df.loc[(df['Bill No'] == bill_no) & (df['Supplier'] == supplier), 'Bill No'] += suffix
+
+    return df
 
 def fetch_bills(invoice_date_from, invoice_date_to):
 
@@ -336,8 +353,11 @@ def fetch_bills(invoice_date_from, invoice_date_to):
     filtered_df = merged_df[merged_df['Line Amount'] != 0]
     filtered_df = filtered_df[['Bill No','Bill Date','DueDate','Currency','Supplier','Memo','Line Amount','Line Tax Amount','Line Description', 'Line Tax Code','Account']]
     filtered_df = filtered_df.sort_values(by='Bill No')
+
     bill_line_count = filtered_df['Bill No'].count()
     bill_count = filtered_df['Bill No'].nunique()
+
+    filtered_df = add_suffix_to_duplicate_bills(filtered_df)
 
     return bill_count, bill_line_count, filtered_df
 
