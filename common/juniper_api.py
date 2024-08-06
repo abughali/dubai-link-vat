@@ -34,15 +34,15 @@ def fetch_and_populate_suppliers():
     category_mapping = {
         "1": "Cross Sell Hotel",
         "2": "Dynamic Hotel",
-        "3": "Excursions",
+        "3": "Static Hotel",
         "4": "Extranet Hotel",
-        "5": "Static Hotel",
+        "5": "XML Hotel",
         "6": "Tickets",
-        "7": "Visa",
-        "8": "XML Hotel",
-        "9": "Offline Hotel"
+        "7": "Offline Hotel",
+        "8": "Excursions",
+        "9": "Visa"
     }
-    
+
     response = requests.post(url, headers=headers, data=data)
 
     if response.status_code == 200:        
