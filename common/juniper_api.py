@@ -226,8 +226,10 @@ def get_booking_details(booking_code):
                 id_book_line = line.get('IdBookLine')
                 cost_amount = line.findtext('.//CostAmountToBeInvoiced')
                 cost_amount = float(cost_amount) if cost_amount is not None else 0.0
+                comm_amount = line.findtext('ComissionAmount')
+                comm_amount = float(comm_amount) if comm_amount is not None else 0.0                
                 total_cost_taxes = sum(float(tax.findtext('totalcost', default='0.0')) for tax in line.findall('.//Tax'))
-                results.append([booking_code, id_book_line, cost_amount, total_cost_taxes, status])
+                results.append([booking_code, id_book_line, cost_amount - comm_amount, total_cost_taxes, status])
 
             return results
         except requests.RequestException as e:
@@ -298,23 +300,27 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                 end_travel_date = format_date(line.get("EndTravelDate"))
                 cost_elem = line.find(".//Cost")
                 supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
+                invoice_line_amount = float(line.get("TotalLineAmount"))
+                supplier_cost = float(cost_elem.get("TotalAmount"))
+
 
                 item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 cost_exchange_rate = float(cost_elem.get("ExchangeRate"))
-
-                invoices.append({
-                    "Bill No": invoice_number,
-                    "Bill Date": invoice_date,
-                    "DueDate": due_date,
-                    "Currency": "AED",
-                    "Supplier": supplier_name,
-                    "Memo": booking_code,
-                    "IdBookLine": id_book_line,
-                    "Line Description": item_description,
-                    "SellExchangeRate": sell_exchange_rate,
-                    "CostExchangeRate": cost_exchange_rate,
-                    "Account": get_category_name(supplier_id)
-                })
+                
+                if (invoice_line_amount > 0) or (supplier_cost != 0):
+                    invoices.append({
+                            "Bill No": invoice_number,
+                            "Bill Date": invoice_date,
+                            "DueDate": due_date,
+                            "Currency": "AED",
+                            "Supplier": supplier_name,
+                            "Memo": booking_code,
+                            "IdBookLine": id_book_line,
+                            "Line Description": item_description,
+                            "SellExchangeRate": sell_exchange_rate,
+                            "CostExchangeRate": cost_exchange_rate,
+                            "Account": get_category_name(supplier_id)
+                        })
 
         df = pd.DataFrame(invoices)
         return df        
@@ -346,7 +352,7 @@ def fetch_bills(invoice_date_from, invoice_date_to):
     booking_codes = bills["Memo"].unique().tolist()
     booking_details = fetch_booking_details_concurrently(booking_codes)
     booking_details_df = pd.DataFrame(booking_details, columns=["Memo", "IdBookLine", "Line Amount", "Line Tax Amount", "Status"])
-    merged_df = bills.merge(booking_details_df, on=["Memo", "IdBookLine"], how="left")
+    merged_df = pd.merge(bills, booking_details_df, on=["Memo", "IdBookLine"], how="inner")
     merged_df['Line Amount'] = merged_df.apply(lambda row: currency_converter(row['Line Amount'], row['CostExchangeRate'], row['SellExchangeRate']), axis=1)
     merged_df['Line Tax Amount'] = merged_df.apply(lambda row: currency_converter(row['Line Tax Amount'], row['CostExchangeRate'], row['SellExchangeRate']), axis=1)
     merged_df['Line Tax Code'] = merged_df['Line Tax Amount'].apply(lambda x: "5% VAT" if x > 0 else "EX Exempt")
@@ -356,7 +362,6 @@ def fetch_bills(invoice_date_from, invoice_date_to):
 
     bill_line_count = filtered_df['Bill No'].count()
     bill_count = filtered_df['Bill No'].nunique()
-
     filtered_df = add_suffix_to_duplicate_bills(filtered_df)
 
     return bill_count, bill_line_count, filtered_df
