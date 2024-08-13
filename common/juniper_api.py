@@ -307,8 +307,8 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                 item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 cost_exchange_rate = float(cost_elem.get("ExchangeRate"))
                 
-                if (invoice_line_amount > 0) or (supplier_cost != 0):
-                    invoices.append({
+                #if (invoice_line_amount > 0) or (supplier_cost != 0):
+                invoices.append({
                             "Bill No": invoice_number,
                             "Bill Date": invoice_date,
                             "DueDate": due_date,
