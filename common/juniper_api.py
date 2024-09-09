@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from ratelimit import limits, RateLimitException, sleep_and_retry
+from ratelimit import limits, sleep_and_retry
 from concurrent.futures import ThreadPoolExecutor as PoolExecutor
 
 # Define the global supplier list
@@ -307,20 +307,20 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                 item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 cost_exchange_rate = float(cost_elem.get("ExchangeRate"))
                 
-                #if (invoice_line_amount > 0) or (supplier_cost != 0):
-                invoices.append({
-                            "Bill No": invoice_number,
-                            "Bill Date": invoice_date,
-                            "DueDate": due_date,
-                            "Currency": "AED",
-                            "Supplier": supplier_name,
-                            "Memo": booking_code,
-                            "IdBookLine": id_book_line,
-                            "Line Description": item_description,
-                            "SellExchangeRate": sell_exchange_rate,
-                            "CostExchangeRate": cost_exchange_rate,
-                            "Account": get_category_name(supplier_id)
-                        })
+                if (invoice_line_amount != 0) and (supplier_cost != 0):
+                    invoices.append({
+                                "Bill No": invoice_number,
+                                "Bill Date": invoice_date,
+                                "DueDate": due_date,
+                                "Currency": "AED",
+                                "Supplier": supplier_name,
+                                "Memo": booking_code,
+                                "IdBookLine": id_book_line,
+                                "Line Description": item_description,
+                                "SellExchangeRate": sell_exchange_rate,
+                                "CostExchangeRate": cost_exchange_rate,
+                                "Account": get_category_name(supplier_id)
+                            })
 
         df = pd.DataFrame(invoices)
         return df        
@@ -365,4 +365,3 @@ def fetch_bills(invoice_date_from, invoice_date_to):
     filtered_df = add_suffix_to_duplicate_bills(filtered_df)
 
     return bill_count, bill_line_count, filtered_df
-
