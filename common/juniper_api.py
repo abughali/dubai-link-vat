@@ -290,7 +290,6 @@ def get_bill_details(invoice_date_from, invoice_date_to):
             due_date = format_date(invoice.get("DueDate"))
             operation_rate_elem = invoice.find(".//OperationRate")
             sell_exchange_rate = float(operation_rate_elem.text) if operation_rate_elem is not None and operation_rate_elem.text else 1.0
-
             for line in invoice.findall(".//Line"):
                 booking_code = line.get("BookingCode")
                 id_book_line = line.get("IdBookingLine")

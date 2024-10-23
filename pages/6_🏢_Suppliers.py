@@ -33,7 +33,7 @@ def product_supplier_editor(filename):
         submitted = st.form_submit_button("💾 Save")
         if submitted:
             new_row = pd.DataFrame([{'Supplier Name': new_supplier, 'Service Type': new_service_type, 'Taxes Included': new_tax}])
-            rules_df = pd.concat([rules_df, new_row]).drop_duplicates(subset=['Supplier'], keep='last')
+            rules_df = pd.concat([rules_df, new_row]).drop_duplicates(subset=['Supplier Name'], keep='last')
             utils.save_rules(rules_df, filename)
             st.success("Saved!")
             st.rerun()
