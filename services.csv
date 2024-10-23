@@ -1,6 +1,6 @@
 Service Type,VAT Exempt
-Excursion,False
 Hotel Reservation,False
+Excursion,False
 Air Ticket,True
 Visa,False
 Other,True
