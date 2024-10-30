@@ -78,6 +78,49 @@ def format_date(date_str):
         return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S").strftime("%Y-%m-%d")
     return ""
 
+def get_account_manager(customer_id):
+    # URL and headers
+    url = "https://www.gte.travel/wsExportacion/wsCustomers.asmx/getCustomerList"
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+
+    # Data payload
+    data = {
+        "user": st.secrets["gte_user"],
+        "password": st.secrets["gte_password"],      
+        "customerType": "",
+        "creationDateFrom": "",
+        "creationDateTo": "",
+        "id": customer_id,
+        "BranchType": "",
+        "ExportMode": "",
+        "LastModifiedDateFrom": "",
+        "LastModifiedDateTo": "",
+        "LastModifiedTimeFrom": "",
+        "LastModifiedTimeTo": "",
+        "AmountBaseCurrency": ""
+    }
+
+    try:
+        response = requests.post(url, headers=headers, data=data)
+        response.raise_for_status()
+
+        content = response.text
+        root = ET.fromstring(content)
+
+        account_manager = root.find('.//AccountManager')
+
+        if account_manager is not None:
+            return account_manager.text.strip()
+        else:
+            print(f"Warning: No Account Manager found for {customer_id}")
+            return ""
+
+    except requests.RequestException as e:
+        print(f"Error fetching data for {customer_id}: {e}")
+        return ""
+
 def fetch_invoices(invoice_date_from, invoice_date_to):
     # URL and headers
     url = "https://www.gte.travel/wsExportacion/wsinvoices.asmx/GetInvoices"
@@ -120,6 +163,9 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
             invoice_date = format_date(invoice.get("InvoiceDate"))
             due_date = format_date(invoice.get("DueDate"))
             currency = invoice.get("Currency")
+                    # Extracting Customer Id
+            customer = invoice.find(".//Customer")
+            customer_id = customer.get("Id") if customer is not None else ""
             customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
             operation_rate_elem = invoice.find(".//OperationRate")
             exchange_rate = float(operation_rate_elem.text) if operation_rate_elem is not None and operation_rate_elem.text else 1.0
@@ -162,7 +208,8 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                     "Taxes": taxes,
                     "Item Description": item_description,
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
-                    "Service": get_category_name(supplier_id)
+                    "Service": get_category_name(supplier_id),
+                    "Account Manager": get_account_manager(customer_id)
                 }
 
                 invoices.append(line_data)
