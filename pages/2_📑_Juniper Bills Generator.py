@@ -13,7 +13,7 @@ def bill_save_csv_files(df, start_date_str, end_date_str):
     grouped = df_positive.groupby("Bill No")
     
     # Create chunks
-    chunk_size = 10000
+    chunk_size = 4000
     current_chunk = []
     chunks = []
     current_size = 0
