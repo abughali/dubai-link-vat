@@ -14,7 +14,7 @@ def save_csv_files(df, start_date_str, end_date_str):
     grouped = df_positive.groupby("Invoice No")
     
     # Create chunks
-    chunk_size = 1000
+    chunk_size = 10000
     current_chunk = []
     chunks = []
     current_size = 0
@@ -40,12 +40,21 @@ def save_csv_files(df, start_date_str, end_date_str):
     return csv_files
 
 def save_credit_memo_files(df, start_date_str, end_date_str):
-    credit_memo_df = df[df["Item Amount"] < 0]
+    # Filter for rows where "Item Amount" is negative
+    credit_memo_df = df[df["Item Amount"] < 0].copy()
+
+    # Take absolute values of "Item Amount" and "Taxes"
+    credit_memo_df["Item Amount"] = credit_memo_df["Item Amount"].abs()
+    credit_memo_df["Taxes"] = credit_memo_df["Taxes"].abs()
+
     if not credit_memo_df.empty:
+        # Define file name and convert DataFrame to CSV
         credit_memo_file_name = f'credit_memo_{start_date_str}_{end_date_str}.csv'
         credit_memo_csv = credit_memo_df.to_csv(index=False)
         return credit_memo_file_name, credit_memo_csv
+
     return None, None
+
 
 def qb_invoices():
     pd.options.mode.copy_on_write = True

@@ -60,8 +60,7 @@ def fetch_and_populate_suppliers():
                 "Category Id": category_id,
                 "Category Name": category_name
             }
-            supplierList.append(supplier_data)
-                
+            supplierList.append(supplier_data)                
     else:
         st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
 
@@ -78,50 +77,8 @@ def format_date(date_str):
         return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S").strftime("%Y-%m-%d")
     return ""
 
-def get_account_manager(customer_id):
-    # URL and headers
-    url = "https://www.gte.travel/wsExportacion/wsCustomers.asmx/getCustomerList"
-    headers = {
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
 
-    # Data payload
-    data = {
-        "user": st.secrets["gte_user"],
-        "password": st.secrets["gte_password"],      
-        "customerType": "",
-        "creationDateFrom": "",
-        "creationDateTo": "",
-        "id": customer_id,
-        "BranchType": "",
-        "ExportMode": "",
-        "LastModifiedDateFrom": "",
-        "LastModifiedDateTo": "",
-        "LastModifiedTimeFrom": "",
-        "LastModifiedTimeTo": "",
-        "AmountBaseCurrency": ""
-    }
-
-    try:
-        response = requests.post(url, headers=headers, data=data)
-        response.raise_for_status()
-
-        content = response.text
-        root = ET.fromstring(content)
-
-        account_manager = root.find('.//AccountManager')
-
-        if account_manager is not None:
-            return account_manager.text.strip()
-        else:
-            print(f"Warning: No Account Manager found for {customer_id}")
-            return ""
-
-    except requests.RequestException as e:
-        print(f"Error fetching data for {customer_id}: {e}")
-        return ""
-
-def fetch_invoices(invoice_date_from, invoice_date_to):
+def fetch_invoice_details(invoice_date_from, invoice_date_to):
     # URL and headers
     url = "https://www.gte.travel/wsExportacion/wsinvoices.asmx/GetInvoices"
     headers = {
@@ -153,17 +110,13 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
     if response.status_code == 200:
         root = ET.fromstring(response.text)
 
-        invoice_count = 0
-        invoice_item_count = 0
         invoices = []
 
         for invoice in root.findall(".//Invoice"):
-            invoice_count += 1
             invoice_number = invoice.get("InvoiceNumber")
             invoice_date = format_date(invoice.get("InvoiceDate"))
             due_date = format_date(invoice.get("DueDate"))
             currency = invoice.get("Currency")
-                    # Extracting Customer Id
             customer = invoice.find(".//Customer")
             customer_id = customer.get("Id") if customer is not None else ""
             customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
@@ -171,7 +124,6 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
             exchange_rate = float(operation_rate_elem.text) if operation_rate_elem is not None and operation_rate_elem.text else 1.0
 
             for line in invoice.findall(".//Line"):
-                invoice_item_count += 1
                 service = line.find(".//Service").text if line.find(".//Service") is not None else ""
                 pax_name = invoice.find(".//Passenger/name").text if invoice.find(".//Passenger/name") is not None else ""
                 pax_surname = invoice.find(".//Passenger/surname").text if invoice.find(".//Passenger/surname") is not None else ""
@@ -195,33 +147,96 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
                 else:
                     item_amount = float(line.get("NetLineAmount"))
                     taxes = float(line.get("Taxes"))
-             
+
                 line_data = {
                     "Invoice No": invoice_number,
                     "InvoiceDate": invoice_date,
-                    "DueDate": due_date,
+                   # "DueDate": due_date,
                     "Service Date": service_date,
                     "Currency": "AED",
                     "CustomerName": customer_name,
-                    "Memo": line.get("BookingCode"),
+                    "Booking Code": line.get("BookingCode"),
                     "Item Amount": item_amount,
                     "Taxes": taxes,
                     "Item Description": item_description,
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
                     "Service": get_category_name(supplier_id),
-                    "Account Manager": get_account_manager(customer_id)
+                    "Customer Id": customer_id
                 }
 
                 invoices.append(line_data)
         
         # Create a DataFrame
         df = pd.DataFrame(invoices)
-        return invoice_count, invoice_item_count, df
+        return df
     else:
         st.error(f"Failed to fetch invoices. Status code: {response.status_code}")
-        return 0, 0, pd.DataFrame()
+        return pd.DataFrame()
 
+@sleep_and_retry
+@limits(calls=1000, period=1)
+def get_customer_info(customer_id):
+    # URL and headers
+    url = "https://www.gte.travel/wsExportacion/wsCustomers.asmx/getCustomerList"
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
 
+    # Data payload
+    data = {
+        "user": st.secrets["gte_user"],
+        "password": st.secrets["gte_password"],      
+        "customerType": "",
+        "creationDateFrom": "",
+        "creationDateTo": "",
+        "id": customer_id,
+        "BranchType": "",
+        "ExportMode": "",
+        "LastModifiedDateFrom": "",
+        "LastModifiedDateTo": "",
+        "LastModifiedTimeFrom": "",
+        "LastModifiedTimeTo": "",
+        "AmountBaseCurrency": ""
+    }
+
+    try:
+        # Send request
+        response = requests.post(url, headers=headers, data=data)
+        response.raise_for_status()
+
+        # Parse XML response
+        content = response.text
+        root = ET.fromstring(content)
+
+        # Extract fields
+        account_manager = root.find('.//AccountManager')
+        payment_type = root.find('.//Customer').get('PaymentType')
+        location = root.find('.//DefaultCountry')
+
+        # Map payment type to specific terms
+        payment_terms_mapping = {
+            "C": "Net 30",
+            "B": "Due on receipt",
+            "T": "Due on receipt"
+        }
+        payment_terms = payment_terms_mapping.get(payment_type, "Unknown")
+
+        # Ensure text is available for each field
+        customer_data = [
+            customer_id,
+            account_manager.text.strip() if account_manager is not None else "NA",
+            payment_terms,
+            location.text.strip() if location is not None else "NA"
+        ]
+        return [customer_data]
+
+    except requests.RequestException as e:
+        print(f"Error fetching data for {customer_id}: {e}")
+        return []
+    except ET.ParseError:
+        print("Error parsing XML response")
+        return []
+    
 @sleep_and_retry
 @limits(calls=1000, period=1)
 def get_booking_details(booking_code):
@@ -290,6 +305,13 @@ def fetch_booking_details_concurrently(booking_codes, max_workers=1000):
             results.extend(result)
     return results
 
+def fetch_customer_info_concurrently(customer_ids, max_workers=1000):
+    results = []
+    with PoolExecutor(max_workers=max_workers) as executor:
+        for result in executor.map(get_customer_info, customer_ids):
+            results.extend(result)
+    return results
+
 # Function to remove time from datetime string
 def format_date(date_str):
     if date_str:
@@ -347,7 +369,7 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                 cost_elem = line.find(".//Cost")
                 supplier_id = cost_elem.get("SupplierId") if cost_elem is not None else ""
                 invoice_line_amount = float(line.get("TotalLineAmount"))
-                supplier_cost = float(cost_elem.get("TotalAmount"))
+                #supplier_cost = float(cost_elem.get("TotalAmount"))
 
 
                 item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
@@ -360,7 +382,7 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                                 "DueDate": due_date,
                                 "Currency": "AED",
                                 "Supplier": supplier_name,
-                                "Memo": booking_code,
+                                "Booking Code": booking_code,
                                 "IdBookLine": id_book_line,
                                 "Line Description": item_description,
                                 "SellExchangeRate": sell_exchange_rate,
@@ -392,18 +414,36 @@ def add_suffix_to_duplicate_bills(df):
 
     return df
 
+
+
+
+def fetch_invoices(invoice_date_from, invoice_date_to):
+
+    invoices = fetch_invoice_details(invoice_date_from, invoice_date_to)
+    customer_ids = invoices["Customer Id"].unique().tolist()
+    print(customer_ids)
+    invoice_details = fetch_customer_info_concurrently(customer_ids)
+    invoice_details_df = pd.DataFrame(invoice_details, columns=["Customer Id", "Account Manager", "Payment Terms", "Location"])
+    merged_df = pd.merge(invoices, invoice_details_df, on=["Customer Id"], how="inner")
+    filtered_df = merged_df.sort_values(by='Invoice No')
+    bill_line_count = filtered_df['Invoice No'].count()
+    bill_count = filtered_df['Invoice No'].nunique()
+    filtered_df = filtered_df.drop(columns=["Customer Id"])
+    return bill_count, bill_line_count, filtered_df
+
+
 def fetch_bills(invoice_date_from, invoice_date_to):
 
     bills = get_bill_details(invoice_date_from, invoice_date_to)
-    booking_codes = bills["Memo"].unique().tolist()
+    booking_codes = bills["Booking Code"].unique().tolist()
     booking_details = fetch_booking_details_concurrently(booking_codes)
-    booking_details_df = pd.DataFrame(booking_details, columns=["Memo", "IdBookLine", "Line Amount", "Line Tax Amount", "Status"])
-    merged_df = pd.merge(bills, booking_details_df, on=["Memo", "IdBookLine"], how="inner")
+    booking_details_df = pd.DataFrame(booking_details, columns=["Booking Code", "IdBookLine", "Line Amount", "Line Tax Amount", "Status"])
+    merged_df = pd.merge(bills, booking_details_df, on=["Booking Code", "IdBookLine"], how="inner")
     merged_df['Line Amount'] = merged_df.apply(lambda row: currency_converter(row['Line Amount'], row['CostExchangeRate'], row['SellExchangeRate']), axis=1)
     merged_df['Line Tax Amount'] = merged_df.apply(lambda row: currency_converter(row['Line Tax Amount'], row['CostExchangeRate'], row['SellExchangeRate']), axis=1)
     merged_df['Line Tax Code'] = merged_df['Line Tax Amount'].apply(lambda x: "5% VAT" if x > 0 else "EX Exempt")
     filtered_df = merged_df[merged_df['Line Amount'] != 0]
-    filtered_df = filtered_df[['Bill No','Bill Date','DueDate','Currency','Supplier','Memo','Line Amount','Line Tax Amount','Line Description', 'Line Tax Code','Account']]
+    filtered_df = filtered_df[['Bill No','Bill Date','DueDate','Currency','Supplier','Booking Code','Line Amount','Line Tax Amount','Line Description', 'Line Tax Code','Account']]
     filtered_df = filtered_df.sort_values(by='Bill No')
 
     bill_line_count = filtered_df['Bill No'].count()

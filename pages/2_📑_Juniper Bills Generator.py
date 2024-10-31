@@ -13,7 +13,7 @@ def bill_save_csv_files(df, start_date_str, end_date_str):
     grouped = df_positive.groupby("Bill No")
     
     # Create chunks
-    chunk_size = 1000
+    chunk_size = 10000
     current_chunk = []
     chunks = []
     current_size = 0
@@ -39,11 +39,16 @@ def bill_save_csv_files(df, start_date_str, end_date_str):
     return csv_files
 
 def bill_save_credit_memo_files(df, start_date_str, end_date_str):
-    credit_memo_df = df[df["Line Amount"] < 0]
+    credit_memo_df = df[df["Line Amount"] < 0].copy()
+
+    credit_memo_df["Line Amount"] = credit_memo_df["Line Amount"].abs()
+    credit_memo_df["Line Tax Amount"] = credit_memo_df["Line Tax Amount"].abs()
+
     if not credit_memo_df.empty:
-        credit_memo_file_name = f'supplier_credit_{start_date_str}_{end_date_str}.csv'
+        credit_memo_file_name = f'vendor_credit_{start_date_str}_{end_date_str}.csv'
         credit_memo_csv = credit_memo_df.to_csv(index=False)
         return credit_memo_file_name, credit_memo_csv
+
     return None, None
 
 def qb_bills():
