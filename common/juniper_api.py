@@ -43,6 +43,19 @@ def fetch_and_populate_suppliers():
         "9": "Visa"
     }
 
+    # Account mapping
+    account_mapping = {
+        "1": "Cross Sell - COS",
+        "2": "Dynamic COS",
+        "3": "Static - COS",
+        "4": "Extranet - COS",
+        "5": "XML - COS",
+        "6": "Tickets- COS",
+        "7": "Offline Hotel",
+        "8": "Excursions - COS",
+        "9": "Visas - COS"
+    }
+
     response = requests.post(url, headers=headers, data=data)
 
     if response.status_code == 200:        
@@ -54,21 +67,23 @@ def fetch_and_populate_suppliers():
             category_element = supplier.find(".//Category")
             category_id = category_element.get('Id') if category_element is not None else None
             category_name = category_mapping.get(category_id, "Others")
+            account_name = account_mapping.get(category_id, "Others")
             
             supplier_data = {
                 "Supplier Id": supplier.get("Id"),
                 "Category Id": category_id,
-                "Category Name": category_name
+                "Product Name": category_name,
+                "Account Name": account_name,
             }
             supplierList.append(supplier_data)                
     else:
         st.error(f"Failed to fetch suppliers. Status code: {response.status_code}")
 
-def get_category_name(supplier_id):
+def get_product_and_account(supplier_id):
     global supplierList
     for supplier in supplierList:
         if supplier["Supplier Id"] == supplier_id:
-            return supplier["Category Name"]
+            return supplier["Product Name"], supplier["Account Name"]
     return "Supplier ID not found"
 
 # Function to remove time from datetime string
@@ -115,7 +130,7 @@ def fetch_invoice_details(invoice_date_from, invoice_date_to):
         for invoice in root.findall(".//Invoice"):
             invoice_number = invoice.get("InvoiceNumber")
             invoice_date = format_date(invoice.get("InvoiceDate"))
-            due_date = format_date(invoice.get("DueDate"))
+            # due_date = format_date(invoice.get("DueDate"))
             currency = invoice.get("Currency")
             customer = invoice.find(".//Customer")
             customer_id = customer.get("Id") if customer is not None else ""
@@ -147,7 +162,8 @@ def fetch_invoice_details(invoice_date_from, invoice_date_to):
                 else:
                     item_amount = float(line.get("NetLineAmount"))
                     taxes = float(line.get("Taxes"))
-
+                
+                service, _ = get_product_and_account(supplier_id)
                 line_data = {
                     "Invoice No": invoice_number,
                     "InvoiceDate": invoice_date,
@@ -160,7 +176,7 @@ def fetch_invoice_details(invoice_date_from, invoice_date_to):
                     "Taxes": taxes,
                     "Item Description": item_description,
                     "Tax Code": "5% VAT" if taxes > 0 else "EX Exempt",
-                    "Service": get_category_name(supplier_id),
+                    "Service": service,
                     "Customer Id": customer_id
                 }
 
@@ -357,6 +373,7 @@ def get_bill_details(invoice_date_from, invoice_date_to):
             invoice_number = invoice.get("InvoiceNumber")
             invoice_date = format_date(invoice.get("InvoiceDate"))
             due_date = format_date(invoice.get("DueDate"))
+            customer_name = invoice.find(".//CustomerName").text if invoice.find(".//CustomerName") is not None else ""
             operation_rate_elem = invoice.find(".//OperationRate")
             sell_exchange_rate = float(operation_rate_elem.text) if operation_rate_elem is not None and operation_rate_elem.text else 1.0
             for line in invoice.findall(".//Line"):
@@ -375,6 +392,8 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                 item_description = f"{service}\nTravel Date {begin_travel_date} - {end_travel_date}"
                 cost_exchange_rate = float(cost_elem.get("ExchangeRate"))
                 
+                product, account = get_product_and_account(supplier_id)
+
                 if (invoice_line_amount != 0):# and (supplier_cost != 0):
                     invoices.append({
                                 "Bill No": invoice_number,
@@ -387,7 +406,9 @@ def get_bill_details(invoice_date_from, invoice_date_to):
                                 "Line Description": item_description,
                                 "SellExchangeRate": sell_exchange_rate,
                                 "CostExchangeRate": cost_exchange_rate,
-                                "Account": get_category_name(supplier_id)
+                                "Product": product,
+                                "Account": account,
+                                "Customer": customer_name,
                             })
 
         df = pd.DataFrame(invoices)
@@ -421,7 +442,6 @@ def fetch_invoices(invoice_date_from, invoice_date_to):
 
     invoices = fetch_invoice_details(invoice_date_from, invoice_date_to)
     customer_ids = invoices["Customer Id"].unique().tolist()
-    print(customer_ids)
     invoice_details = fetch_customer_info_concurrently(customer_ids)
     invoice_details_df = pd.DataFrame(invoice_details, columns=["Customer Id", "Account Manager", "Payment Terms", "Location"])
     merged_df = pd.merge(invoices, invoice_details_df, on=["Customer Id"], how="inner")
@@ -443,7 +463,7 @@ def fetch_bills(invoice_date_from, invoice_date_to):
     merged_df['Line Tax Amount'] = merged_df.apply(lambda row: currency_converter(row['Line Tax Amount'], row['CostExchangeRate'], row['SellExchangeRate']), axis=1)
     merged_df['Line Tax Code'] = merged_df['Line Tax Amount'].apply(lambda x: "5% VAT" if x > 0 else "EX Exempt")
     filtered_df = merged_df[merged_df['Line Amount'] != 0]
-    filtered_df = filtered_df[['Bill No','Bill Date','DueDate','Currency','Supplier','Booking Code','Line Amount','Line Tax Amount','Line Description', 'Line Tax Code','Account']]
+    filtered_df = filtered_df[['Bill No','Bill Date','DueDate','Currency','Supplier','Booking Code','Line Amount','Line Tax Amount','Line Description', 'Line Tax Code','Account', 'Customer', 'Product']]
     filtered_df = filtered_df.sort_values(by='Bill No')
 
     bill_line_count = filtered_df['Bill No'].count()
